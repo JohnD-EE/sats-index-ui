@@ -7,13 +7,19 @@
         hide-on-scroll
       >
       <v-toolbar-side-icon class="mr-3">
-        <v-avatar color="orange" size="32">
-        <v-icon  dark>
-          mdi-format-section
-        </v-icon>
-        </v-avatar>
+        <router-link style="text-decoration: none; color: inherit;" to="/"> 
+          <v-avatar color="orange" size="32">
+            <v-icon dark>
+            mdi-format-section
+            </v-icon>
+          </v-avatar>
+        </router-link>
     </v-toolbar-side-icon>
-        <v-toolbar-title>Sats Index</v-toolbar-title>
+        <v-toolbar-title>
+          <router-link style="text-decoration: none; color: inherit;" to="/">
+            <span class="font-weight-bold">SatsIndex</span>
+          </router-link>
+          </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items>
           <v-btn text :ripple="false" plain to="/">
@@ -41,10 +47,12 @@
         <v-app-bar-nav-icon>
         </v-app-bar-nav-icon>
       </v-app-bar>
+      <v-divider></v-divider>
       <v-container mt-5 ml-1 mb-1 mr-1>
         <router-view />
       </v-container>
     </div>
+    
   </v-app>
 </template>
 
