@@ -1,5 +1,14 @@
 <template>
     <div>
-        <h2>This is the fiat shitcoin page for not-yet-worthless government currencies</h2>
+        <v-container fluid>
+            <v-layout row wrap>
+                <v-flex xs12>
+                    <h2>Fiat Shitcoin</h2>
+                </v-flex>
+                <v-flex xs12>
+                    <p>The not-yet-worthless government currencies</p>
+                </v-flex>
+            </v-layout>
+        </v-container>
     </div>
 </template>

@@ -3,10 +3,10 @@
         <v-container fluid>
             <v-layout row wrap>
                 <v-flex xs12>
-                    <h2>Have you been Orange Pilled?</h2>
+                    <h2>Catechism</h2>
                 </v-flex>
                 <v-flex xs12>
-                    <p>The belief that Bitcoin is Gold 2.0 and will become the world reserve currency</p>
+                    <p>Memorising the doctrine</p>
                 </v-flex>
             </v-layout>
         </v-container>
