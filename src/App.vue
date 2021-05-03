@@ -6,10 +6,12 @@
         flat
         hide-on-scroll
       >
-      <v-toolbar-side-icon>
-        <v-icon large>
+      <v-toolbar-side-icon class="mr-3">
+        <v-avatar color="orange" size="32">
+        <v-icon  dark>
           mdi-format-section
         </v-icon>
+        </v-avatar>
     </v-toolbar-side-icon>
         <v-toolbar-title>Sats Index</v-toolbar-title>
         <v-spacer></v-spacer>
