@@ -1,12 +1,12 @@
 <template>
     <div>
-        <v-container fluid>
+        <v-container>
             <v-layout row wrap>
                 <v-flex xs12>
                     <h2>Satoshi</h2>
                 </v-flex>
                 <v-flex xs12>
-                    <p>The creation myth</p>
+                    <p class="body-2">The creation myth</p>
                 </v-flex>
             </v-layout>
         </v-container>

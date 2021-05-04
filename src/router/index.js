@@ -6,6 +6,7 @@ import Money101 from '../views/Money101.vue'
 import Catechism from '../views/Catechism.vue'
 import Satoshi from '../views/Satoshi.vue'
 import Blog from '../views/Blog.vue'
+import Offer from '../views/Offer.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -45,7 +46,12 @@ const routes = [
         path: '/blog',
         name: 'Blog',
         component: Blog
-    }           
+    },
+    {
+        path: '/offer',
+        name: 'Offer',
+        component: Offer
+    }             
 ]
 
 const router = new VueRouter({

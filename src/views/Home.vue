@@ -1,20 +1,19 @@
 <template>
     <div>
-        <v-container fluid>
+        <v-container>
             <v-layout row wrap>
-                <v-flex xs12>
+                <v-flex xs12 sm9 md6>
                     <h2>The purchasing power of your Sats</h2>
-                </v-flex>
-                <v-flex xs12>
                     <p class="body-2">If Bitcoin continues its adoption path as the soundest form of money on the planet, people will want to know the price of everyday goods and services in Sats (Satoshis), the smallest denomination of a bitcoin.</p>
-                    <p class="body-2">There are 100 million Satoshis to a Bitcoin. When people no longer have any trust in government issued fiat shitcoins, we may see Sats becoming the widely accepted <strong>unit of account</strong>.</p>
+                    <p class="body-2">There are 100 million Satoshis to a Bitcoin. When people no longer have any trust in government issued fiat shitcoins, we may see Sats becoming the widely accepted <strong>unit of account</strong>.</p>  
                 </v-flex>
             </v-layout>
         </v-container>
         <v-container  class="mt-10">
             <v-layout row wrap>
-                <v-flex xs12>
-                    <h3>A basket of goods and services</h3>
+                <v-flex xs12 class="mb-3">
+                    <h3 class="text-center">A basket of goods and services</h3>
+                    <p class="body-2 text-center">A selection of well known goods and services to asses the purchasing power of your Sats.</p>
                 </v-flex>
                 <v-flex xs12>
                     <template>

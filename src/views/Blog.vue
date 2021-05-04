@@ -1,12 +1,12 @@
 <template>
     <div>
-        <v-container fluid>
+        <v-container>
             <v-layout row wrap>
                 <v-flex xs12>
                     <h2>Blog</h2>
                 </v-flex>
                 <v-flex xs12>
-                    <p>Perspectives, news and events...</p>
+                    <p class="body-2">Perspectives, news and events...</p>
                 </v-flex>
             </v-layout>
         </v-container>

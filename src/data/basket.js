@@ -11,10 +11,10 @@ Template:
 
 const basketItems = [
     {
-        name: 'Kindess, love and joy',
+        name: 'Peace, love and kindness',
         currency: 'GBP',
         price: 0,
-        source: 'Free... Be excelent to each other',
+        source: 'Totally free! Be excelent to each other',
         sourceLink: '',
         datetime: '0000-00-00T12:00:00'
     },
@@ -84,15 +84,15 @@ const basketItems = [
     },
     {
         name: '2 Large Pizzas',
-        currency: 'USA',
+        currency: 'USD',
         price: 4500,
-        source: '2 Papa John\'s Pizzas in honour of Laszlo Hanyecz, Jacksonville FLorida',
+        source: '2 Papa John\'s Pizzas in honour of Laszlo Hanyecz',
         sourceLink: '',
         datetime: '2021-05-03T12:00:00'
     },
     {
         name: 'A bag of weed',
-        currency: 'USA',
+        currency: 'USD',
         price: 4075,
         source: 'Eigth of an ounce of Marijuana (derived from $326 average)',
         sourceLink: 'https://oxfordtreatment.com/substance-abuse/marijuana/average-cost-of-marijuana/',
@@ -100,22 +100,46 @@ const basketItems = [
     },
     {
         name: 'Netflix',
-        currency: 'USA',
+        currency: 'USD',
         price: 1399,
         source: 'Monthly Subscription to the Standard package',
         sourceLink: 'https://help.netflix.com/en/node/24926/us',
         datetime: '2021-05-03T12:00:00'
     },
     {
+        name: 'Afternoon Tea at The Ritz',
+        currency: 'GBP',
+        price: 5500,
+        source: 'One adult at The Ritz, London',
+        sourceLink: 'https://www.theritzlondon.com/dine-with-us/afternoon-tea/',
+        datetime: '2021-05-03T12:00:00'
+    },
+    {
         name: 'Amazon Prime',
-        currency: 'USA',
+        currency: 'USD',
         price: 11900,
         source: 'Yearly Subscription to Amazon Prime',
         sourceLink: 'https://www.amazon.com/gp/prime/pipeline/partner_landing',
         datetime: '2021-05-03T12:00:00'
     },
     {
-        name: '1 Bitcoin',
+        name: 'Gucci Bag',
+        currency: 'USD',
+        price: 149000,
+        source: 'GG Marmont small shoulder bag, pastel pink leather',
+        sourceLink: 'https://www.gucci.com/us/en/pr/women/handbags/crossbody-bags-for-women/gg-marmont-small-shoulder-bag-p-447632DTD1Y5815',
+        datetime: '2021-05-03T12:00:00'
+    },
+    {
+        name: 'iPhone 12',
+        currency: 'USD',
+        price: 79900,
+        source: 'Apple iPhone 12 64GB',
+        sourceLink: 'https://www.apple.com/shop/buy-iphone/iphone-12',
+        datetime: '2021-05-03T12:00:00'
+    },
+    {
+        name: 'One Bitcoin',
         currency: 'BTC',
         price: 1,
         source: 'The price of 1 Bitcoin',
@@ -126,7 +150,7 @@ const basketItems = [
         name: 'Gold',
         currency: 'USD',
         price: 178655,
-        source: 'An ounce of Gold',
+        source: 'One troy ounce of Gold',
         sourceLink: 'https://www.bullionvault.com/gold-price-chart.do',
         datetime: '2021-05-04T12:00:00'
     },
@@ -153,6 +177,22 @@ const basketItems = [
         source: 'Average price of a house in the UK',
         sourceLink: 'https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/housepriceindex/february2021',
         datetime: '2021-01-01T12:00:00'
+    },
+    {
+        name: 'Bitcoin Block Reward',
+        currency: 'BTC',
+        price: 6.25,
+        source: 'The reward for mining a Bitcoin block since the last halving',
+        sourceLink: 'https://en.bitcoin.it/wiki/Controlled_supply',
+        datetime: '2020-05-11T12:00:00'
+    },
+    {
+        name: 'SatsIndex.com',
+        currency: 'BTC',
+        price: 25,
+        source: 'This domain and assets - Get it while it\'s cheap!',
+        sourceLink: '/offer',
+        datetime: '2021-05-04T12:00:00'
     }
 ]
 
