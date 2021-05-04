@@ -24,6 +24,7 @@
                             item-key="name"
                             class="elevation-1"
                             hide-default-footer
+                            items-per-page="100"
                         ></v-data-table>
                     </template>
                 </v-flex>
@@ -47,7 +48,7 @@ import basket from '../data/basket.js'
         { text: 'BTC Price', align: 'end', sortable: false, value: 'price', symbol: '&#8383;' },
         { text: 'USD Price', align: 'end', sortable: false, value: 'price', symbol: '&dollar;' },
         { text: 'GBP Price', align: 'end', sortable: false, value: 'price', symbol: '&pound;' },
-        { text: 'Source', align: 'end', sortable: false, value: 'source' },
+        { text: 'Description and Source', align: 'end', sortable: false, value: 'source' },
         { text: 'Date', align: 'end', sortable: false, value: 'datetime' }
       ]
     })

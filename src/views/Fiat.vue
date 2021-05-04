@@ -6,7 +6,8 @@
                     <h2>Fiat Shitcoin</h2>
                 </v-flex>
                 <v-flex xs12>
-                    <p>The not-yet-worthless government ordained currencies</p>
+                    <p>The not-yet-worthless government ordained currencies.</p>
+                    <p>Our systems of money are broken. Bitcoin fixes this.</p>
                 </v-flex>
             </v-layout>
         </v-container>
