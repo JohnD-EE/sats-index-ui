@@ -16,7 +16,7 @@ const basketItems = [
         price: 0,
         source: 'Totally free! Be excelent to each other',
         sourceLink: '',
-        datetime: '0000-00-00T12:00:00'
+        datetime: 'Forever'
     },
     {
         name: 'An Apple',
@@ -191,7 +191,8 @@ const basketItems = [
         currency: 'BTC',
         price: 25,
         source: 'This domain and assets - Get it while it\'s cheap!',
-        sourceLink: '/offer',
+        sourceLink: '',
+        internalLink: '/offer',
         datetime: '2021-05-04T12:00:00'
     }
 ]
