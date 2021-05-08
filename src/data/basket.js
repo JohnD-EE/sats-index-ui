@@ -16,7 +16,7 @@ const basketItems = [
         name: 'Peace, love and kindness',
         currency: 'BTC',
         price: 0,
-        source: 'Totally free! Be excelent to each other',
+        source: 'Totally free! Be excellent to each other',
         sourceLink: '',
         datetime: 'Forever',
         logo: 'orangeHeart.png'
@@ -28,7 +28,7 @@ const basketItems = [
         source: 'A single Granny Smith\'s apple from Sainsbury\'s',
         sourceLink: 'https://www.sainsburys.co.uk/gol-ui/Product/sainsburys-granny-smith-apples-single-c',
         datetime: '2021-05-03T12:00:00',
-        logo: 'grannySmiths.jpg'
+        logo: 'greenAppleLogo.png'
     },
     {
         name: 'Loaf of Bread',
@@ -37,7 +37,7 @@ const basketItems = [
         source: 'RPI Average, White loaf sliced, 800g',
         sourceLink: 'https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/czoh/mm23',
         datetime: '2021-03-01T12:00:00',
-        logo: 'whiteLoafLogo.jpg'
+        logo: 'breadLogo.png'
     },
     {
         name: '1 pint of milk',
@@ -46,7 +46,7 @@ const basketItems = [
         source: 'A pint of semi-skimmed from Tesco',
         sourceLink: 'https://www.tesco.com/groceries/en-GB/products/251314158',
         datetime: '2021-05-04T12:00:00',
-        logo: 'pintMilkLogo.jpg'
+        logo: 'milkLogo.png'
     },
     {
         name: 'Bottle of Coke',
@@ -106,7 +106,7 @@ const basketItems = [
         name: 'A bag of weed',
         currency: 'USD',
         price: 4075,
-        source: 'Eigth of an ounce of Marijuana (derived from $326 average)',
+        source: 'Eigth of an ounce of Marijuana (derived from $326 average for one ounce)',
         sourceLink: 'https://oxfordtreatment.com/substance-abuse/marijuana/average-cost-of-marijuana/',
         datetime: '2020-09-15T12:00:00',
         logo: 'weedLogo.png'
@@ -149,6 +149,15 @@ const basketItems = [
         logo: 'gucciLogo.png'
     },
     {
+        name: 'Xbox Console',
+        currency: 'USD',
+        price: 49900,
+        source: 'Xbox Series X Console',
+        sourceLink: 'https://www.xbox.com/en-GB/consoles/xbox-series-x',
+        datetime: '2021-05-07T12:00:00',
+        logo: 'xboxLogo.png'
+    },
+    {
         name: 'iPhone 12',
         currency: 'USD',
         price: 79900,
@@ -156,6 +165,15 @@ const basketItems = [
         sourceLink: 'https://www.apple.com/shop/buy-iphone/iphone-12',
         datetime: '2021-05-03T12:00:00',
         logo: 'appleLogo.png'
+    },
+    {
+        name: 'Fender Stratocaster',
+        currency: 'USD',
+        price: 189999,
+        source: 'American Ultra Stratocaster Guitar',
+        sourceLink: 'https://shop.fender.com/en-US/electric-guitars/stratocaster/american-ultra-stratocaster/0118010712.html',
+        datetime: '2021-05-07T12:00:00',
+        logo: 'fenderLogo.png'
     },
     {
         name: 'One Bitcoin',
@@ -173,7 +191,7 @@ const basketItems = [
         source: 'One troy ounce of Gold',
         sourceLink: 'https://www.bullionvault.com/gold-price-chart.do',
         datetime: '2021-05-04T12:00:00',
-        logo: 'goldLogo.jpg'
+        logo: 'goldLogo.png'
     },
     {
         name: 'Tesla Model S',

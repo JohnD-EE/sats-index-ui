@@ -20,7 +20,7 @@
 >
 <div class="pa-5">
 <h5 class="">A basket of goods and services</h5>
-                    <p class="body-2">A selection of well known goods and services to asses the purchasing power of your Sats.</p>
+                    <p class="body-2">A selection of everyday and aspirational goods and services to asses the purchasing power of your Sats.</p>
                 </div>
                     <template>
                         <v-data-table
@@ -39,7 +39,7 @@
                                         <v-container>
                                             <v-layout row>
                                                 <v-flex xs5 sm4 md3 lg3>
-                                        <v-avatar size="36">
+                                        <v-avatar size="32" tile>
                                             <img 
                                                 :src="item.logoSource" 
                                                 alt="Brand Logo"
@@ -122,7 +122,7 @@ import formatCurrency from 'format-currency'
   export default {
     data: () => ({
         formatCurrency: formatCurrency,
-        BTCtoUSD: 59116,
+        BTCtoUSD: 58612,
         GBPtoUSD: 1.39093,
         SATSinBTC: 100000000,
         basketItems: basket.basketItems,
