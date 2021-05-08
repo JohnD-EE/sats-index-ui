@@ -224,7 +224,7 @@ const basketItems = [
         name: 'Bitcoin Block Reward',
         currency: 'BTC',
         price: 6.25,
-        source: 'The reward for mining a Bitcoin block since the last halving',
+        source: 'Reward for mining a Bitcoin block since the last halving',
         sourceLink: 'https://en.bitcoin.it/wiki/Controlled_supply',
         datetime: '2020-05-11T12:00:00',
         logo: 'btcLogo.png'
@@ -239,7 +239,16 @@ const basketItems = [
         internalLinkText: 'Get it while it\'s cheap!',
         datetime: '2021-05-04T12:00:00',
         logo: 'satsLogo.png'
-    }
+    },
+    {
+        name: 'Luxury Yacht',
+        currency: 'USD',
+        price: 14500000000,
+        source: 'Illusion Plus, the swankiest yacht we could find',
+        sourceLink: 'https://www.bluewateryachting.com/yacht-for-sale/illusion-plus-14555',
+        datetime: '2021-05-08T12:00:00',
+        logo: 'yachtLogo.png'
+    },
 ]
 
 export default {

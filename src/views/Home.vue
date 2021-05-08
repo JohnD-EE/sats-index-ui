@@ -116,26 +116,33 @@
 
 <script>
 import basket from '../data/basket.js'
-// import exchange from '../data/exchange.js'
+import exchange from '../data/exchange.js'
 import formatCurrency from 'format-currency'
 
   export default {
     data: () => ({
         formatCurrency: formatCurrency,
-        BTCtoUSD: 58612,
-        GBPtoUSD: 1.39093,
-        SATSinBTC: 100000000,
+        exchangeData: exchange.exchangeData,
         basketItems: basket.basketItems,
       headers: [
-        { text: 'Item', width: "24%", align: 'start', sortable: false, value: 'name' },
+        { text: 'Item',  align: 'start', sortable: false, value: 'name' },
         { text: 'Sats / BTC Price', align: 'end', value: 'btc', symbol: '&sect;' },
         { text: 'USD Price', align: 'end', sortable: false, value: 'usd', symbol: '&dollar;' },
         { text: 'GBP Price', align: 'end', sortable: false, value: 'gbp', symbol: '£' },
-        { text: 'Description and Source', align: 'end', sortable: false, value: 'source' },
+        { text: 'Description and Source', width: "29%", align: 'end', sortable: false, value: 'source' },
         { text: 'Date', align: 'end', sortable: false, value: 'datetime' }
       ]
     }),
     computed: {
+        BTCtoUSD () {
+            return this.exchangeData.BTCtoUSD
+        },
+        GBPtoUSD () {
+            return this.exchangeData.GBPtoUSD
+        },
+        SATSinBTC () {
+            return this.exchangeData.SATSinBTC
+        },
         items () {
             let basketItems = this.basketItems
             basketItems.forEach((item, i) => {
