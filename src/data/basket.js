@@ -16,7 +16,8 @@ const basketItems = [
         price: 0,
         source: 'Totally free! Be excelent to each other',
         sourceLink: '',
-        datetime: 'Forever'
+        datetime: 'Forever',
+        logo: 'orangeHeart.png'
     },
     {
         name: 'An Apple',
@@ -24,7 +25,8 @@ const basketItems = [
         price: 30,
         source: 'A single Granny Smith\'s apple from Sainsbury\'s',
         sourceLink: 'https://www.sainsburys.co.uk/gol-ui/Product/sainsburys-granny-smith-apples-single-c',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'grannySmiths.jpg'
     },
     {
         name: 'Loaf of Bread',
@@ -32,7 +34,8 @@ const basketItems = [
         price: 109,
         source: 'RPI Average, White loaf sliced, 800g',
         sourceLink: 'https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/czoh/mm23',
-        datetime: '2021-03-01T12:00:00'
+        datetime: '2021-03-01T12:00:00',
+        logo: 'whiteLoafLogo.jpg'
     },
     {
         name: '1 pint of milk',
@@ -40,7 +43,8 @@ const basketItems = [
         price: 50,
         source: 'A pint of semi-skimmed from Tesco',
         sourceLink: 'https://www.tesco.com/groceries/en-GB/products/251314158',
-        datetime: '2021-05-04T12:00:00'
+        datetime: '2021-05-04T12:00:00',
+        logo: 'pintMilkLogo.jpg'
     },
     {
         name: 'Bottle of Coke',
@@ -48,7 +52,8 @@ const basketItems = [
         price: 134,
         source: 'A single 12 Fl. Oz. CocaCola from Walmart',
         sourceLink: 'https://www.walmart.com/ip/Coca-Cola-Soda-12-Fl-Oz/16940377',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'cocaColaLogo.png'
     },
     {
         name: 'A Caffè Latte',
@@ -56,7 +61,8 @@ const basketItems = [
         price: 365,
         source: 'Grande Caffè Latte from Starbucks, USA',
         sourceLink: 'https://www.fastfoodmenuprices.com/starbucks-prices/',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'starbucksLogo.png'
     },
     {
         name: 'Big Mac',
@@ -64,7 +70,8 @@ const basketItems = [
         price: 566,
         source: 'Burgernomics: A Big Mac in the USA',
         sourceLink: 'https://www.economist.com/big-mac-index',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'mcDonaldsLogo.png'
     },
     {
         name: 'A Gallon of Gasoline',
@@ -72,7 +79,8 @@ const basketItems = [
         price: 290,
         source: 'Average cost of Regular Unleaded',
         sourceLink: 'https://gasprices.aaa.com/',
-        datetime: '2021-01-01T00:00:00'
+        datetime: '2021-01-01T00:00:00',
+        logo: 'gasPumpLogo.png'
     },
     {
         name: 'A pint of beer',
@@ -80,15 +88,17 @@ const basketItems = [
         price: 386,
         source: 'Average cost of a pint in the UK',
         sourceLink: 'https://www.finder.com/uk/international-pint-price-map',
-        datetime: '2021-01-01T00:00:00'
+        datetime: '2021-01-01T00:00:00',
+        logo: 'pintBeerLogo.png'
     },
     {
-        name: '2 Large Pizzas',
+        name: '2 large pizzas',
         currency: 'USD',
         price: 4500,
         source: '2 Papa John\'s Pizzas in honour of Laszlo Hanyecz',
         sourceLink: '',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'papaJohnsLogo.png'
     },
     {
         name: 'A bag of weed',
@@ -96,7 +106,8 @@ const basketItems = [
         price: 4075,
         source: 'Eigth of an ounce of Marijuana (derived from $326 average)',
         sourceLink: 'https://oxfordtreatment.com/substance-abuse/marijuana/average-cost-of-marijuana/',
-        datetime: '2020-09-15T12:00:00'
+        datetime: '2020-09-15T12:00:00',
+        logo: 'weedLogo.png'
     },
     {
         name: 'Netflix',
@@ -104,7 +115,9 @@ const basketItems = [
         price: 1399,
         source: 'Monthly Subscription to the Standard package',
         sourceLink: 'https://help.netflix.com/en/node/24926/us',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'netflixLogo.png'
+
     },
     {
         name: 'Afternoon Tea at The Ritz',
@@ -112,7 +125,8 @@ const basketItems = [
         price: 5500,
         source: 'One adult at The Ritz, London',
         sourceLink: 'https://www.theritzlondon.com/dine-with-us/afternoon-tea/',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'theRitzLogo.jpg'
     },
     {
         name: 'Amazon Prime',
@@ -120,7 +134,8 @@ const basketItems = [
         price: 11900,
         source: 'Yearly Subscription to Amazon Prime',
         sourceLink: 'https://www.amazon.com/gp/prime/pipeline/partner_landing',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'amazonLogo.png'
     },
     {
         name: 'Gucci Bag',
@@ -128,7 +143,8 @@ const basketItems = [
         price: 149000,
         source: 'GG Marmont small shoulder bag, pastel pink leather',
         sourceLink: 'https://www.gucci.com/us/en/pr/women/handbags/crossbody-bags-for-women/gg-marmont-small-shoulder-bag-p-447632DTD1Y5815',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'gucciLogo.png'
     },
     {
         name: 'iPhone 12',
@@ -136,7 +152,8 @@ const basketItems = [
         price: 79900,
         source: 'Apple iPhone 12 64GB',
         sourceLink: 'https://www.apple.com/shop/buy-iphone/iphone-12',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'appleLogo.png'
     },
     {
         name: 'One Bitcoin',
@@ -144,7 +161,8 @@ const basketItems = [
         price: 1,
         source: 'The price of 1 Bitcoin',
         sourceLink: 'https://bitcoin.org/',
-        datetime: ''
+        datetime: '2009-01-03T12:00:00',
+        logo: 'btcLogo.png'
     },
     {
         name: 'Gold',
@@ -152,7 +170,8 @@ const basketItems = [
         price: 178655,
         source: 'One troy ounce of Gold',
         sourceLink: 'https://www.bullionvault.com/gold-price-chart.do',
-        datetime: '2021-05-04T12:00:00'
+        datetime: '2021-05-04T12:00:00',
+        logo: 'goldLogo.jpg'
     },
     {
         name: 'Tesla Model S',
@@ -160,7 +179,8 @@ const basketItems = [
         price: 7999000,
         source: 'Dual Motor All-Wheel Drive Long Range',
         sourceLink: 'https://www.tesla.com/models/design#overview',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'teslaLogo.png'
     },
     {
         name: 'Lambo',
@@ -168,7 +188,8 @@ const basketItems = [
         price: 42132100,
         source: '2021 Lamborghini Aventador',
         sourceLink: 'https://www.caranddriver.com/lamborghini/aventador',
-        datetime: '2021-05-03T12:00:00'
+        datetime: '2021-05-03T12:00:00',
+        logo: 'lamboLogo.png'
     },
     {
         name: 'A UK House',
@@ -176,7 +197,8 @@ const basketItems = [
         price: 28600000,
         source: 'Average price of a house in the UK',
         sourceLink: 'https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/housepriceindex/february2021',
-        datetime: '2021-01-01T12:00:00'
+        datetime: '2021-01-01T12:00:00',
+        logo: 'houseLogo.png'
     },
     {
         name: 'Bitcoin Block Reward',
@@ -184,7 +206,8 @@ const basketItems = [
         price: 6.25,
         source: 'The reward for mining a Bitcoin block since the last halving',
         sourceLink: 'https://en.bitcoin.it/wiki/Controlled_supply',
-        datetime: '2020-05-11T12:00:00'
+        datetime: '2020-05-11T12:00:00',
+        logo: 'btcLogo.png'
     },
     {
         name: 'SatsIndex.com',
@@ -193,7 +216,8 @@ const basketItems = [
         source: 'This domain and assets - Get it while it\'s cheap!',
         sourceLink: '',
         internalLink: '/offer',
-        datetime: '2021-05-04T12:00:00'
+        datetime: '2021-05-04T12:00:00',
+        logo: 'satsLogo.png'
     }
 ]
 

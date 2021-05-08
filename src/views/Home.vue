@@ -19,37 +19,54 @@
                     <template>
                         <v-data-table
                             :headers="headers"
-                            :items="basketItems"
+                            :items="items"
                             item-key="name"
                             class="elevation-1"
                             hide-default-footer
-                            items-per-page="100"
+                            :items-per-page="100"
                         >
                             <template v-slot:item="{ item }">
                                 <tr>
                                     <td width="{ item.width }">
-                                        <span  class="font-weight-medium">
+                                        <v-container>
+                                            <v-layout row>
+                                                <v-flex xs5 sm4 md3 lg3>
+                                        <v-avatar size="36">
+                                            <img 
+                                                :src="item.logoSource" 
+                                                alt="Brand Logo"
+                                                >
+                                                </v-avatar>
+                                                </v-flex>
+                                                <v-flex xs7 sm8 md9 lg9>
+                                            <span  class="font-weight-medium">
                                             {{ item.name }}
                                         </span>
+                                        </v-flex>
+                                        </v-layout>
+
+                                            </v-container>
+                                    </td>
+                                    <td class="text-right">
+                                        <div>
+                                        <span class="font-weight-medium">
+                                            {{ formatCurrency(item.sats, { format: '%v %c', code: 'Sats', minFraction: 0, maxFraction: 0 }) }}
+                                        </span>
+                                        </div>
+                                        <div>
+                                            <span class="font-weight-light">
+                                            {{ formatCurrency(item.btc, { format: '%v %c', code: 'BTC', minFraction: 0, maxFraction: 8 }) }}
+                                        </span>
+                                            </div>
                                     </td>
                                     <td class="text-right">
                                         <span class="font-weight-medium">
-                                            &sect;{{ utilitiesHelper.commaNumber(item.price, 0) }}
+                                            {{ formatCurrency( (item.usd / 100), { format: '%s%v', symbol: '$' }) }}
                                         </span>
                                     </td>
                                     <td class="text-right">
                                         <span class="font-weight-medium">
-                                            &#8383;{{ utilitiesHelper.commaNumber(item.price, 8) }}
-                                        </span>
-                                    </td>
-                                    <td class="text-right">
-                                        <span class="font-weight-medium">
-                                            &dollar;{{ utilitiesHelper.commaNumber(item.price, 2) }}
-                                        </span>
-                                    </td>
-                                    <td class="text-right">
-                                        <span class="font-weight-medium">
-                                            &pound;{{ utilitiesHelper.commaNumber(item.price, 2) }}
+                                            {{ formatCurrency( (item.gbp / 100), { format: '%s%v', symbol: '£' }) }}
                                         </span>
                                     </td>
                                     <td class="text-right caption">
@@ -82,24 +99,51 @@
 
 <script>
 import basket from '../data/basket.js'
-import utilitiesHelper from '../helpers/utilities.js'
+import formatCurrency from 'format-currency'
 
   export default {
     data: () => ({
-        utilitiesHelper: utilitiesHelper,
-        BTCinUSD: 57518,
+        formatCurrency: formatCurrency,
+        BTCtoUSD: 59116,
         GBPtoUSD: 1.39093,
         SATSinBTC: 100000000,
         basketItems: basket.basketItems,
       headers: [
-        { text: 'Item', width: "15%", align: 'start', sortable: false, value: 'name' },
-        { text: 'Sats Price', align: 'end', sortable: false, value: 'price', symbol: '&sect;' },
-        { text: 'BTC Price', align: 'end', sortable: false, value: 'price', symbol: '&#8383;' },
+        { text: 'Item', width: "24%", align: 'start', sortable: false, value: 'name' },
+        { text: 'Sats / BTC Price', align: 'end', sortable: false, value: 'price', symbol: '&sect;' },
         { text: 'USD Price', align: 'end', sortable: false, value: 'price', symbol: '&dollar;' },
         { text: 'GBP Price', align: 'end', sortable: false, value: 'price', symbol: '£' },
         { text: 'Description and Source', align: 'end', sortable: false, value: 'source' },
         { text: 'Date', align: 'end', sortable: false, value: 'datetime' }
       ]
-    })
+    }),
+    computed: {
+        items () {
+            let basketItems = this.basketItems
+            basketItems.forEach((item, i) => {
+                if (item.currency === 'GBP') {
+                    basketItems[i].gbp = item.price
+                    basketItems[i].usd = item.price * this.GBPtoUSD
+                    basketItems[i].btc = (basketItems[i].usd /100) / this.BTCtoUSD
+                    basketItems[i].sats = basketItems[i].btc * this.SATSinBTC
+                } else if (item.currency === 'USD') {
+                    basketItems[i].gbp = item.price / this.GBPtoUSD
+                    basketItems[i].usd = item.price
+                    basketItems[i].btc = (item.price / 100) / this.BTCtoUSD
+                    basketItems[i].sats = basketItems[i].btc * this.SATSinBTC
+                } else if (item.currency === 'BTC') {                    
+                    basketItems[i].usd = (item.price * 100) * this.BTCtoUSD
+                    basketItems[i].gbp = basketItems[i].usd / this.GBPtoUSD
+                    basketItems[i].btc = item.price
+                    basketItems[i].sats = basketItems[i].btc * this.SATSinBTC
+                }
+                if (item.logo) {
+                    basketItems[i].logoSource = require('../assets/brandLogos/' + item.logo)
+                }
+            }
+        )
+        return basketItems
+        }
+    }
   }
 </script>
