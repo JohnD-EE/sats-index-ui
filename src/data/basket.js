@@ -5,14 +5,16 @@ Template:
         currency: '',
         price: ,
         source: '',
-        datetime: ''
+        sourceLink: '',
+        datetime: '',
+        logo: ''
     },
 */
 
 const basketItems = [
     {
         name: 'Peace, love and kindness',
-        currency: 'GBP',
+        currency: 'BTC',
         price: 0,
         source: 'Totally free! Be excelent to each other',
         sourceLink: '',
@@ -213,9 +215,10 @@ const basketItems = [
         name: 'SatsIndex.com',
         currency: 'BTC',
         price: 25,
-        source: 'This domain and assets - Get it while it\'s cheap!',
+        source: 'The satsindex.com domain and assets',
         sourceLink: '',
         internalLink: '/offer',
+        internalLinkText: 'Get it while it\'s cheap!',
         datetime: '2021-05-04T12:00:00',
         logo: 'satsLogo.png'
     }

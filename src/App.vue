@@ -54,7 +54,7 @@
         </v-app-bar-nav-icon>
       </v-app-bar>
       <v-divider></v-divider>
-      <v-container fluid mt-15 mb-15>
+      <v-container fluid mt-10 mb-15>
         <router-view />
       </v-container>
       <v-footer

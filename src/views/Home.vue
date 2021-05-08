@@ -2,26 +2,34 @@
     <div>
         <v-container>
             <v-layout row wrap>
-                <v-flex xs12 sm9 md6>
+                <v-flex xs12 sm6>
                     <h2>The purchasing power of your Sats</h2>
-                    <p class="body-2">If Bitcoin continues its adoption path as the soundest form of money on the planet, people will want to know the price of everyday goods and services in Sats (Satoshis), the smallest denomination of a bitcoin.</p>
-                    <p class="body-2">There are 100 million Satoshis to a Bitcoin. When people no longer have any trust in government issued fiat shitcoins, we may see Sats becoming the widely accepted <strong>unit of account</strong>.</p>  
-                </v-flex>
+                        <p class="body-2">There are 100 million Satoshis to a Bitcoin. When people no longer have any trust in government issued fiat shitcoins, we may see Sats becoming a globally accepted standard <strong>unit of account</strong> so that talking about the value of things in Sats may be commonplace in the not too distant future.</p>
+                    </v-flex>
             </v-layout>
         </v-container>
         <v-container  class="mt-10">
             <v-layout row wrap>
-                <v-flex xs12 class="mb-3">
-                    <h3 class="text-center">A basket of goods and services</h3>
-                    <p class="body-2 text-center">A selection of well known goods and services to asses the purchasing power of your Sats.</p>
-                </v-flex>
+                
                 <v-flex xs12>
+                    <v-sheet
+  color="grey lighten-4"
+  elevation="3"
+  outlined
+  tile
+>
+<div class="pa-5">
+<h5 class="">A basket of goods and services</h5>
+                    <p class="body-2">A selection of well known goods and services to asses the purchasing power of your Sats.</p>
+                </div>
                     <template>
                         <v-data-table
                             :headers="headers"
                             :items="items"
                             item-key="name"
-                            class="elevation-1"
+                            class="elevation-1 pa-3"
+                            :sort-by="['btc']"
+                            :sort-desc="[false, true]"
                             hide-default-footer
                             :items-per-page="100"
                         >
@@ -81,6 +89,12 @@
                                             </v-icon>
                                             </v-btn>
                                         </div>
+                                        <div v-if="item.internalLink">
+                                            <v-btn x-small outlined :href="item.internalLink">
+                                            <span class="font-weight-light">{{ item.internalLinkText }}</span>
+                                            
+                                            </v-btn>
+                                            </div>
                                     </td>
                                     <td class="text-right caption">
                                         {{ item.datetime | moment("MMM Do YYYY") }}
@@ -91,6 +105,9 @@
                         </v-data-table>
                         
                     </template>
+                    
+                </v-sheet>
+
                 </v-flex>
             </v-layout>
         </v-container>
@@ -99,6 +116,7 @@
 
 <script>
 import basket from '../data/basket.js'
+// import exchange from '../data/exchange.js'
 import formatCurrency from 'format-currency'
 
   export default {
@@ -110,9 +128,9 @@ import formatCurrency from 'format-currency'
         basketItems: basket.basketItems,
       headers: [
         { text: 'Item', width: "24%", align: 'start', sortable: false, value: 'name' },
-        { text: 'Sats / BTC Price', align: 'end', sortable: false, value: 'price', symbol: '&sect;' },
-        { text: 'USD Price', align: 'end', sortable: false, value: 'price', symbol: '&dollar;' },
-        { text: 'GBP Price', align: 'end', sortable: false, value: 'price', symbol: '£' },
+        { text: 'Sats / BTC Price', align: 'end', value: 'btc', symbol: '&sect;' },
+        { text: 'USD Price', align: 'end', sortable: false, value: 'usd', symbol: '&dollar;' },
+        { text: 'GBP Price', align: 'end', sortable: false, value: 'gbp', symbol: '£' },
         { text: 'Description and Source', align: 'end', sortable: false, value: 'source' },
         { text: 'Date', align: 'end', sortable: false, value: 'datetime' }
       ]
