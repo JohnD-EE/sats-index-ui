@@ -20,7 +20,7 @@
 >
 <div class="pa-5">
 <h5 class="">A basket of goods and services</h5>
-                    <p class="body-2">A selection of everyday and aspirational goods and services to asses the purchasing power of your Sats.</p>
+                    <p class="body-2">A selection of everyday and aspirational goods, services and other benchmarks to assess the purchasing power of your Sats.</p>
                 </div>
                     <template>
                         <v-data-table
@@ -151,16 +151,34 @@ import formatCurrency from 'format-currency'
                     basketItems[i].usd = item.price * this.GBPtoUSD
                     basketItems[i].btc = (basketItems[i].usd /100) / this.BTCtoUSD
                     basketItems[i].sats = basketItems[i].btc * this.SATSinBTC
+                    if ((basketItems[i].btc) > 1) {
+                        basketItems[i].btc = Math.round(basketItems[i].btc * 100) / 100
+                    }
+                    if ((basketItems[i].btc) > 100) {
+                        basketItems[i].btc = Math.round(basketItems[i].btc)
+                    }
                 } else if (item.currency === 'USD') {
                     basketItems[i].gbp = item.price / this.GBPtoUSD
                     basketItems[i].usd = item.price
                     basketItems[i].btc = (item.price / 100) / this.BTCtoUSD
                     basketItems[i].sats = basketItems[i].btc * this.SATSinBTC
+                    if ((basketItems[i].btc) > 1) {
+                        basketItems[i].btc = Math.round(basketItems[i].btc * 100) / 100
+                    }
+                    if ((basketItems[i].btc) > 100) {
+                        basketItems[i].btc = Math.round(basketItems[i].btc)
+                    }
                 } else if (item.currency === 'BTC') {                    
                     basketItems[i].usd = (item.price * 100) * this.BTCtoUSD
                     basketItems[i].gbp = basketItems[i].usd / this.GBPtoUSD
                     basketItems[i].btc = item.price
                     basketItems[i].sats = basketItems[i].btc * this.SATSinBTC
+                    if ((basketItems[i].btc) > 1) {
+                        basketItems[i].btc = Math.round(basketItems[i].btc * 100) / 100
+                    }
+                    if ((basketItems[i].btc) > 100) {
+                        basketItems[i].btc = Math.round(basketItems[i].btc)
+                    }
                 }
                 if (item.logo) {
                     basketItems[i].logoSource = require('../assets/brandLogos/' + item.logo)

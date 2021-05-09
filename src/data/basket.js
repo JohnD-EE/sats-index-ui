@@ -140,6 +140,15 @@ const basketItems = [
         logo: 'amazonLogo.png'
     },
     {
+        name: 'BBC TV License',
+        currency: 'GBP',
+        price: 15900,
+        source: 'Yearly TV License for the British Biased Corporation',
+        sourceLink: 'https://www.bbc.co.uk/news/entertainment-arts-55981697',
+        datetime: '2021-05-08T12:00:00',
+        logo: 'bbcLogo.png'
+    },
+    {
         name: 'Gucci Bag',
         currency: 'USD',
         price: 149000,
@@ -249,6 +258,33 @@ const basketItems = [
         datetime: '2021-05-08T12:00:00',
         logo: 'yachtLogo.png'
     },
+    {
+        name: 'Jeff Bezos',
+        currency: 'USD',
+        price: 19100000000000,
+        source: 'World\'s richest person according to Forbes',
+        sourceLink: 'https://www.forbes.com/real-time-billionaires/#1b0138893d78',
+        datetime: '2021-05-08T12:00:00',
+        logo: 'jeffBezos.jpg'
+    },
+    {
+        name: 'UK National Debt',
+        currency: 'GBP',
+        price: 214200000000000,
+        source: 'The UK National Debt Bomb',
+        sourceLink: 'https://tradingeconomics.com/country-list/government-debt',
+        datetime: '2021-03-31T12:00:00',
+        logo: 'debtBombLogo.png'
+    },
+    {
+        name: 'USA National Debt',
+        currency: 'USD',
+        price: 2817471400000000,
+        source: 'The USA National Debt Bomb',
+        sourceLink: 'https://tradingeconomics.com/country-list/government-debt',
+        datetime: '2021-04-30T12:00:00',
+        logo: 'debtBombLogo.png'
+    }
 ]
 
 export default {
