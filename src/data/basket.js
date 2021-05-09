@@ -143,8 +143,8 @@ const basketItems = [
         name: 'BBC TV License',
         currency: 'GBP',
         price: 15900,
-        source: 'Yearly TV License for the British Biased Corporation',
-        sourceLink: 'https://www.bbc.co.uk/news/entertainment-arts-55981697',
+        source: 'For their inaccurate and derogatory reporting on BTC ',
+        sourceLink: 'https://www.bbc.co.uk/news/topics/c734j90em14t/bitcoin',
         datetime: '2021-05-08T12:00:00',
         logo: 'bbcLogo.png'
     },

@@ -58,23 +58,23 @@
                                     <td class="text-right">
                                         <div>
                                         <span class="font-weight-medium">
-                                            {{ formatCurrency(item.sats, { format: '%v %c', code: 'Sats', minFraction: 0, maxFraction: 0 }) }}
+                                            {{ item.satsFormatted }}
                                         </span>
                                         </div>
                                         <div>
                                             <span class="font-weight-light">
-                                            {{ formatCurrency(item.btc, { format: '%v %c', code: 'BTC', minFraction: 0, maxFraction: 8 }) }}
+                                            {{ item.btcFormatted }}
                                         </span>
                                             </div>
                                     </td>
                                     <td class="text-right">
                                         <span class="font-weight-medium">
-                                            {{ formatCurrency( (item.usd / 100), { format: '%s%v', symbol: '$' }) }}
+                                            {{ item.usdFormatted }}
                                         </span>
                                     </td>
                                     <td class="text-right">
                                         <span class="font-weight-medium">
-                                            {{ formatCurrency( (item.gbp / 100), { format: '%s%v', symbol: '£' }) }}
+                                            {{ item.gbpFormatted }}
                                         </span>
                                     </td>
                                     <td class="text-right caption">
@@ -121,6 +121,7 @@ import formatCurrency from 'format-currency'
 
   export default {
     data: () => ({
+        trillion: 1000000000000,
         formatCurrency: formatCurrency,
         exchangeData: exchange.exchangeData,
         basketItems: basket.basketItems,
@@ -157,6 +158,7 @@ import formatCurrency from 'format-currency'
                     if ((basketItems[i].btc) > 100) {
                         basketItems[i].btc = Math.round(basketItems[i].btc)
                     }
+                    basketItems[i].gbpFormatted = formatCurrency((basketItems[i].gbp / 100), { format: '%s%v', symbol: '£' })
                 } else if (item.currency === 'USD') {
                     basketItems[i].gbp = item.price / this.GBPtoUSD
                     basketItems[i].usd = item.price
@@ -167,7 +169,7 @@ import formatCurrency from 'format-currency'
                     }
                     if ((basketItems[i].btc) > 100) {
                         basketItems[i].btc = Math.round(basketItems[i].btc)
-                    }
+                    }                    
                 } else if (item.currency === 'BTC') {                    
                     basketItems[i].usd = (item.price * 100) * this.BTCtoUSD
                     basketItems[i].gbp = basketItems[i].usd / this.GBPtoUSD
@@ -183,6 +185,26 @@ import formatCurrency from 'format-currency'
                 if (item.logo) {
                     basketItems[i].logoSource = require('../assets/brandLogos/' + item.logo)
                 }
+            //Formatting Currencies
+            if ((basketItems[i].gbp) / 100 > this.trillion) {
+                basketItems[i].gbpFormatted = formatCurrency(Math.round((basketItems[i].gbp)/100/this.trillion * 100) / 100, {format: '%s%v%c', symbol: '£', code: 'T', minFraction: 0, maxFraction: 1})
+            } else {
+                let decimalsGBP = basketItems[i].gbp > 10000 ? 0 : 2
+                if (basketItems[i].gbp > 10000) {decimalsGBP = 0} 
+                basketItems[i].gbpFormatted = formatCurrency((basketItems[i].gbp / 100), { format: '%s%v', symbol: '£', minFraction: decimalsGBP, maxFraction: decimalsGBP })
+            }
+            if ((basketItems[i].usd) / 100 > this.trillion) {
+                basketItems[i].usdFormatted = formatCurrency(Math.round((basketItems[i].usd)/100/this.trillion * 100) / 100, {format: '%s%v%c', symbol: '$', code: 'T', minFraction: 0, maxFraction: 1}) 
+            } else {
+                let decimalsUSD = basketItems[i].usd > 10000 ? 0 : 2
+                basketItems[i].usdFormatted = formatCurrency((basketItems[i].usd / 100), { format: '%s%v', symbol: '$', minFraction: decimalsUSD, maxFraction: decimalsUSD })
+            }
+            if (basketItems[i].sats > this.trillion) {
+                basketItems[i].satsFormatted = formatCurrency(Math.round(basketItems[i].sats/this.trillion * 100) / 100, {format: '%v%c', code: 'T Sats', minFraction: 0, maxFraction: 1} ) 
+            } else {
+                basketItems[i].satsFormatted = formatCurrency(basketItems[i].sats, { format: '%v %c', code: 'Sats', minFraction: 0, maxFraction: 0 })
+            }
+            basketItems[i].btcFormatted = formatCurrency(basketItems[i].btc, { format: '%v %c', code: 'BTC', minFraction: 0, maxFraction: 8 })
             }
         )
         return basketItems
