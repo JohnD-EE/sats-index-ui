@@ -117,14 +117,39 @@ import formatCurrency from 'format-currency'
         trillion: 1000000000000,
         formatCurrency: formatCurrency,
         exchangeData: exchange.exchangeData,
+        fiatShitcoinData: exchange.fiatShitcoinData,
         headers: [
             { text: 'Currency',  align: 'start', sortable: false, value: 'name' },
-            { text: 'Price in Sats', align: 'end', value: 'priceInSats', symbol: '&sect;' },
+            { text: 'Price in Sats', align: 'end', sortable: false, value: 'priceInSats', symbol: '&sect;' },
             { text: 'M2 Market Cap in USD', align: 'end', sortable: false, value: 'marketCapM2InUSD', symbol: '&dollar;' },
             { text: 'M2 Market Cap in BTC', align: 'end', sortable: false, value: 'marketCapM2InBTC', symbol: '£' },
             { text: 'Circulating Supply', align: 'end', sortable: false, value: 'circulatingSupply' },
             { text: 'Max Supply', align: 'end', sortable: false, value: 'maxSupply' }, 
             { text: 'Date', align: 'end', sortable: false, value: 'datetime' }
         ]
-    })
+    }),
+    computed: {
+        BTCtoUSD () {
+            return this.exchangeData.BTCtoUSD
+        },
+        GBPtoUSD () {
+            return this.exchangeData.GBPtoUSD
+        },
+        SATSinBTC () {
+            return this.exchangeData.SATSinBTC
+        },
+        items () {
+            let fiatShitcoinData = this.fiatShitcoinData
+            fiatShitcoinData.forEach((item, i) => {
+                fiatShitcoinData[i].priceInSats = 87
+                fiatShitcoinData[i].marketCapM2InUSD = item.M2
+                fiatShitcoinData[i].marketCapM2InBTC = 87
+                fiatShitcoinData[i].circulatingSupply = 87
+                fiatShitcoinData[i].maxSupply = 87
+                fiatShitcoinData[i].flag = 87
+            })
+            return fiatShitcoinData
+        }
+    }
   }
+  </script>
