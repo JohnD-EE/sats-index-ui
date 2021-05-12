@@ -46,7 +46,7 @@ likely to issue a general purpose CBDC in the next three years. https://www.bis.
                                         <v-container>
                                             <v-layout row>
                                                 <v-flex xs5 sm4 md3 lg3>
-                                        <v-avatar size="32" tile>
+                                        <v-avatar size="32">
                                             <img 
                                                 :src="item.flag" 
                                                 alt="Flag"
@@ -59,24 +59,32 @@ likely to issue a general purpose CBDC in the next three years. https://www.bis.
                                         </span>
                                         </v-flex>
                                         </v-layout>
-
                                             </v-container>
                                     </td>
                                     <td class="text-right">
                                         <div>
                                         <span class="font-weight-medium">
-                                            {{ item.priceInSats }}
+                                            ${{ item.priceInUSD }}
                                         </span>
                                         </div>
+                                    </td>
+                                    <td class="text-right">
                                         <div>
-                                            <span class="font-weight-light">
-                                            {{ item.marketCapM2InUSD }}
+                                        <span class="font-weight-medium">
+                                            {{ item.priceInSats }} Sats
+                                        </span>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">
+                                        <div>
+                                            <span class="font-weight-medium">
+                                            {{ item.formattedMarketCapM2InUSD }}
                                         </span>
                                             </div>
                                     </td>
                                     <td class="text-right">
                                         <span class="font-weight-medium">
-                                            {{ item.marketCapM2InBTC }}
+                                            {{ item.formattedMarketCapM2InBTC }}
                                         </span>
                                     </td>
                                     <td class="text-right">
@@ -110,16 +118,19 @@ likely to issue a general purpose CBDC in the next three years. https://www.bis.
 
 <script>
 import exchange from '../data/exchange.js'
+import zillions from '../data/zillions.js'
 import formatCurrency from 'format-currency'
 
   export default {
     data: () => ({
         trillion: 1000000000000,
         formatCurrency: formatCurrency,
+        wordsToNumbers: zillions.wordsToNumbers,
         exchangeData: exchange.exchangeData,
         fiatShitcoinData: exchange.fiatShitcoinData,
         headers: [
             { text: 'Currency',  align: 'start', sortable: false, value: 'name' },
+            { text: 'Price in USD', align: 'end', sortable: false, value: 'priceInUSD', symbol: '$' },            
             { text: 'Price in Sats', align: 'end', sortable: false, value: 'priceInSats', symbol: '&sect;' },
             { text: 'M2 Market Cap in USD', align: 'end', sortable: false, value: 'marketCapM2InUSD', symbol: '&dollar;' },
             { text: 'M2 Market Cap in BTC', align: 'end', sortable: false, value: 'marketCapM2InBTC', symbol: '£' },
@@ -141,12 +152,25 @@ import formatCurrency from 'format-currency'
         items () {
             let fiatShitcoinData = this.fiatShitcoinData
             fiatShitcoinData.forEach((item, i) => {
-                fiatShitcoinData[i].priceInSats = 87
-                fiatShitcoinData[i].marketCapM2InUSD = item.M2
-                fiatShitcoinData[i].marketCapM2InBTC = 87
-                fiatShitcoinData[i].circulatingSupply = 87
-                fiatShitcoinData[i].maxSupply = 87
-                fiatShitcoinData[i].flag = 87
+                //calculate price in Sats
+                fiatShitcoinData[i].priceInSats = Math.round((item.priceInUSD / this.BTCtoUSD) * this.SATSinBTC)
+                let supplyUnitsWord = item.supplyUnitOfAccount
+                let supplyUnitsNumber = 0
+                if (supplyUnitsWord === 'Thoushand') {
+                    supplyUnitsNumber = this.wordsToNumbers.thousand
+                } else if (supplyUnitsWord === 'Million') {
+                    supplyUnitsNumber = this.wordsToNumbers.million
+                } else if (supplyUnitsWord === 'Billion') {
+                    supplyUnitsNumber = this.wordsToNumbers.billion
+                } else if (supplyUnitsWord === 'Trillion') {
+                    supplyUnitsNumber = this.wordsToNumbers.trillion
+                }
+                fiatShitcoinData[i].marketCapM2InUSD = Math.round((item.M2 * item.priceInUSD) * supplyUnitsNumber)
+                fiatShitcoinData[i].formattedMarketCapM2InUSD = formatCurrency((fiatShitcoinData[i].marketCapM2InUSD), {format: '%s%v', symbol: '$', minFraction: 0, maxFraction: 0 })
+                fiatShitcoinData[i].marketCapM2InBTC = Math.round(fiatShitcoinData[i].marketCapM2InUSD / this.BTCtoUSD)
+                fiatShitcoinData[i].formattedMarketCapM2InBTC = formatCurrency(fiatShitcoinData[i].marketCapM2InBTC, {format: '%v %c', code: 'BTC', minFraction: 0, maxFraction: 0 })
+                fiatShitcoinData[i].circulatingSupply = formatCurrency(item.M2, { format: '%v %c', code: item.code, minFraction: 0, maxFraction: 0 }) + ' ' + supplyUnitsWord
+                fiatShitcoinData[i].flag = require('../assets/flags/' + 'ca' + '.png')
             })
             return fiatShitcoinData
         }
