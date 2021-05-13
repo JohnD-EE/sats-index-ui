@@ -12,14 +12,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.155484,
         M2: 227650,
         supplyUnitOfAccount: 'Billion',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'cn'
     }, 
     {
         name: 'United States Dollar',
@@ -27,14 +27,14 @@ const fiatShitcoinData = [
         priceInUSD: 1,
         M2: 19896,
         supplyUnitOfAccount: 'Billion',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'us'
     },
     {
         name: 'Euro',
@@ -42,14 +42,14 @@ const fiatShitcoinData = [
         priceInUSD: 1.21636,
         M2: 14007950,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'eu'
     },
     {
         name: 'Japanese Yen',
@@ -57,14 +57,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.00921102,
         M2: 1144326,
         supplyUnitOfAccount: 'Billion',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'jp'
     },
     {
         name: 'Pound Sterling',
@@ -72,14 +72,14 @@ const fiatShitcoinData = [
         priceInUSD: 1.39893,
         M2: 2862773,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'gb'
     },
     {
         name: 'South Korean Won',
@@ -87,14 +87,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.000899253,
         M2: 3267578,
         supplyUnitOfAccount: 'Billion',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-02-28T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'kr'
     },
     {
         name: 'Indian Rupee',
@@ -102,14 +102,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.0136380,
         M2: 47554,
         supplyUnitOfAccount: 'Billion',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-02-28T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'in'
     },
     {
         name: 'Canadian Dollar',
@@ -117,7 +117,7 @@ const fiatShitcoinData = [
         priceInUSD:  0.824788,
         M2: 2177359,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-02-28T12:00:00',
         subUnitsName: '',
@@ -132,14 +132,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.128771,
         M2: 15760021,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'hk'
     },
     {
         name: 'Australian Dollar',
@@ -147,14 +147,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.784365,
         M2: 0,
         supplyUnitOfAccount: '',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'au'
     },
     {
         name: 'New Taiwan Dollar',
@@ -162,14 +162,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.0359029,
         M2: 50920293,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'tw'
     },
     {
         name: 'Brazillian Real',
@@ -177,14 +177,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.191060,
         M2: 3906046,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'br'
     },
     {
         name: 'Swiss Franc',
@@ -192,14 +192,14 @@ const fiatShitcoinData = [
         priceInUSD: 1.11058,
         M2: 1088347,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'ch'
     },
     {
         name: 'Russian Ruble',
@@ -207,14 +207,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.0135601,
         M2: 58262,
         supplyUnitOfAccount: 'Billion',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'ru'
     },
     {
         name: 'Thai Baht',
@@ -222,14 +222,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.0321906,
         M2: 0,
         supplyUnitOfAccount: '',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'th'
     },
     {
         name: 'Mexican Peso',
@@ -237,14 +237,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.0502490,
         M2: 10509325648,
         supplyUnitOfAccount: 'Thousand',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'mx'
     },
     {
         name: 'Saudi Riyal',
@@ -252,14 +252,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.266667,
         M2: 1972361,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'sa'
     },
     {
         name: 'Singapore Dollar',
@@ -267,14 +267,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.754710,
         M2: 730572,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: '',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: '',
         subUnits: 0,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'sg'
     },
     {
         name: 'Swedish Krona',
@@ -282,14 +282,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.120393,
         M2: 4336988,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: 'kr',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: 'öre',
         subUnits: 100,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'se'
     },
     {
         name: 'Malaysian Ringgit',
@@ -297,14 +297,14 @@ const fiatShitcoinData = [
         priceInUSD: 0.243180,
         M2: 2083781,
         supplyUnitOfAccount: 'Million',
-        maxSupply: 'infinite',
+        maxSupply: 'Infinite',
         symbol: 'RM',
         datetime: '2021-03-31T12:00:00',
         subUnitsName: 'sen',
         subUnits: 100,
         genesisDate: '',
         informationNotes: [],
-        flag: ''
+        flag: 'my'
     }
 ];
 

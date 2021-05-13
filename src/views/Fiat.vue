@@ -45,15 +45,15 @@ likely to issue a general purpose CBDC in the next three years. https://www.bis.
                                     <td width="">
                                         <v-container>
                                             <v-layout row>
-                                                <v-flex xs5 sm4 md3 lg3>
-                                        <v-avatar size="32">
+                                                <v-flex xs6 sm4 md3 lg3>
+                                        <v-avatar size="28" tile>
                                             <img 
                                                 :src="item.flag" 
                                                 alt="Flag"
                                                 >
                                                 </v-avatar>
                                                 </v-flex>
-                                                <v-flex xs7 sm8 md9 lg9>
+                                                <v-flex xs6 sm8 md9 lg9>
                                             <span  class="font-weight-medium">
                                             {{ item.name }}
                                         </span>
@@ -64,37 +64,35 @@ likely to issue a general purpose CBDC in the next three years. https://www.bis.
                                     <td class="text-right">
                                         <div>
                                         <span class="font-weight-medium">
-                                            ${{ item.priceInUSD }}
-                                        </span>
-                                        </div>
-                                    </td>
-                                    <td class="text-right">
-                                        <div>
-                                        <span class="font-weight-medium">
                                             {{ item.priceInSats }} Sats
                                         </span>
                                         </div>
+                                        <div>
+                                            <span class="font-weight-light">
+                                            ${{ item.priceInUSD }}
+                                        </span>
+                                            </div>
                                     </td>
                                     <td class="text-right">
                                         <div>
                                             <span class="font-weight-medium">
+                                            {{ item.formattedMarketCapM2InBTC }}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="font-weight-light">
                                             {{ item.formattedMarketCapM2InUSD }}
                                         </span>
                                             </div>
                                     </td>
                                     <td class="text-right">
                                         <span class="font-weight-medium">
-                                            {{ item.formattedMarketCapM2InBTC }}
-                                        </span>
-                                    </td>
-                                    <td class="text-right">
-                                        <span class="font-weight-medium">
                                             {{ item.circulatingSupply }}
                                         </span>
                                     </td>
-                                    <td class="text-right caption">
+                                    <td class="text-right">
                                         <div>
-                                            {{ item.maxSupply }}
+                                            <span v-if="item.maxSupply === 'Infinite'">&#8734; </span>{{ item.maxSupply }}
                                         </div>
                                     </td>
                                     <td class="text-right caption">
@@ -130,10 +128,8 @@ import formatCurrency from 'format-currency'
         fiatShitcoinData: exchange.fiatShitcoinData,
         headers: [
             { text: 'Currency',  align: 'start', sortable: false, value: 'name' },
-            { text: 'Price in USD', align: 'end', sortable: false, value: 'priceInUSD', symbol: '$' },            
-            { text: 'Price in Sats', align: 'end', sortable: false, value: 'priceInSats', symbol: '&sect;' },
-            { text: 'M2 Market Cap in USD', align: 'end', sortable: false, value: 'marketCapM2InUSD', symbol: '&dollar;' },
-            { text: 'M2 Market Cap in BTC', align: 'end', sortable: false, value: 'marketCapM2InBTC', symbol: '£' },
+            { text: 'Price of one unit in Sats/USD', align: 'end', sortable: false, value: 'priceInSats', symbol: '&sect;' },
+            { text: 'M2 Market Cap in BTC/USD', align: 'end', sortable: false, value: 'marketCapM2InUSD', symbol: '&dollar;' },
             { text: 'Circulating Supply', align: 'end', sortable: false, value: 'circulatingSupply' },
             { text: 'Max Supply', align: 'end', sortable: false, value: 'maxSupply' }, 
             { text: 'Date', align: 'end', sortable: false, value: 'datetime' }
@@ -169,8 +165,8 @@ import formatCurrency from 'format-currency'
                 fiatShitcoinData[i].formattedMarketCapM2InUSD = formatCurrency((fiatShitcoinData[i].marketCapM2InUSD), {format: '%s%v', symbol: '$', minFraction: 0, maxFraction: 0 })
                 fiatShitcoinData[i].marketCapM2InBTC = Math.round(fiatShitcoinData[i].marketCapM2InUSD / this.BTCtoUSD)
                 fiatShitcoinData[i].formattedMarketCapM2InBTC = formatCurrency(fiatShitcoinData[i].marketCapM2InBTC, {format: '%v %c', code: 'BTC', minFraction: 0, maxFraction: 0 })
-                fiatShitcoinData[i].circulatingSupply = formatCurrency(item.M2, { format: '%v %c', code: item.code, minFraction: 0, maxFraction: 0 }) + ' ' + supplyUnitsWord
-                fiatShitcoinData[i].flag = require('../assets/flags/' + 'ca' + '.png')
+                fiatShitcoinData[i].circulatingSupply = formatCurrency(item.M2*supplyUnitsNumber, { format: '%v %c', code: item.code, minFraction: 0, maxFraction: 0 })
+                fiatShitcoinData[i].flag = require(`../assets/flags/${item.flag}.png`)
             })
             return fiatShitcoinData
         }

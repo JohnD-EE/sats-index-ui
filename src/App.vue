@@ -85,7 +85,9 @@
         If this transpires it is likely that the smallest denomination of bitcoin, the Satoshi, would become an accepted <strong>unit of account</strong> for everyday items. 
         Satoshis are already referred to as Sats, so the aim of SatsIndex is to take a candid look at how we might value things in Sats, as well as helping people to extend their curiosity beyond Bitcoin and Sats prices to really understand money and economics, and why the world needs bitcoin as digital Gold 2.0
               </v-card-text>
-
+              <v-card-text class="white--text pt-0">
+              RISK DISCLAIMER: This website is for learning and entertainment. It includes ideas and information about economics and finance which are not intended as investment advice. Investing in in cryptocurrency is complex and high risk and this website is not intended to advocate an investment strategy.
+</v-card-text>
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
