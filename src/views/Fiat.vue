@@ -2,34 +2,28 @@
     <div>
         <v-container>
             <v-layout row wrap>
-                <v-flex xs12>
-                    <h2>Fiat Shitcoin</h2>
+                <v-flex xs12 sm8>
+                <h2>Fiat Shitcoin</h2>
+                    <p class="body-1"><span class="font-italic">"The root problem with conventional currency is all the trust that's required to make it work. The central bank must be trusted not to debase the currency, but the history of fiat currencies is full of breaches of that trust. Banks must be trusted to hold our money and transfer it electronically, but they lend it out in waves of credit bubbles with barely a fraction in reserve."</span>
+                    <span class="font-weight-medium"> - Satoshi Nakamoto, P2P Foundation forum, Feb 2009</span></p>
+                    <p class="body-1"><span class="font-italic">"How did you go bankrupt? Two ways. Gradually, then suddenly."</span>
+                    <span class="font-weight-medium"> - Ernest Hemingway, The Sun Also Rises</span></p>
                 </v-flex>
-                <v-flex xs12>
-                    <p class="body-2">The not-yet-worthless government ordained currencies. Fiat always goes to zero.</p>
-                    <p class="body-2">Our systems of money are broken. Bitcoin fixes this. What if society collapses and the economy goes to hell in a handbasket</p>
-                </v-flex>
-                <p>Fiat as funny money - propping up an unsustainable system</p>
-                <p>central banks collectively representing a fifth of the world’s population are
-likely to issue a general purpose CBDC in the next three years. https://www.bis.org/publ/bppdf/bispap114.pdf Bank of International Settlements.
-</p>
-<p>CBDC of fiat legacy money is like putting lipstick on a pig according to Pomp - https://pomp.substack.com/p/central-bank-digital-currencies-are</p>
             </v-layout>
         </v-container>
 
-        <v-container  class="mt-10">
+        <v-container  class="mt-10 mb-15">
             <v-layout row wrap>
-                
                 <v-flex xs12>
                     <v-sheet
                     color="grey lighten-4"
                     elevation="3"
                     outlined
                     tile
->
+                    >
                     <div class="pa-5">
-                    <h5 class="">A basket of goods and services</h5>
-                    <p class="body-2">A selection of everyday and aspirational goods, services and other benchmarks to assess the purchasing power of your Sats.</p>
+                    <h5 class="">What if the economy collapses, sending us to hell in a handbasket? Bitcoin fixes this.</h5>
+                    <p class="body-2">A selection of 'not-yet-worthless' government ordained 'funny money' priced in Sats and BTC. Bitcoin is helping people to understand the concept of sound money by comparing its 21 Million capped supply with government fiat currencies that can be inflated and debased through money printing. Our legacy systems of money are broken.</p>
                 </div>
                     <template>
                         <v-data-table
@@ -47,8 +41,8 @@ likely to issue a general purpose CBDC in the next three years. https://www.bis.
                                             <v-layout row>
                                                 <v-flex xs6 sm4 md3 lg3>
                                         <v-avatar size="28" tile>
-                                            <img 
-                                                :src="item.flag" 
+                                            <img
+                                                :src="item.displayFlag" 
                                                 alt="Flag"
                                                 >
                                                 </v-avatar>
@@ -111,6 +105,16 @@ likely to issue a general purpose CBDC in the next three years. https://www.bis.
             </v-layout>
         </v-container>
 
+        <v-container>
+            <v-layout row wrap>
+                <v-flex xs12 sm9>
+                    <h3>What can we learn from this?</h3>
+                    <p>Here we will have some learning points about mone as a store of value and contrast the forceful imposition of state issued money against the peaceful voluntariasm of Bitcoin.</p>
+                    <p class="mt-15">Bitcoin doesn't need Satoshi or Elon Musk, it doesn't need guns or the force of the State, it doesn't need a headquarters or a marketing department, it doesn't need branches or security guards, it doesn't need politicians, it doesn't need vaults, it doesn't need bail-outs... It just needs to be understood.</p>
+                    </v-flex>
+            </v-layout>
+        </v-container>
+
     </div>
 </template>
 
@@ -166,7 +170,9 @@ import formatCurrency from 'format-currency'
                 fiatShitcoinData[i].marketCapM2InBTC = Math.round(fiatShitcoinData[i].marketCapM2InUSD / this.BTCtoUSD)
                 fiatShitcoinData[i].formattedMarketCapM2InBTC = formatCurrency(fiatShitcoinData[i].marketCapM2InBTC, {format: '%v %c', code: 'BTC', minFraction: 0, maxFraction: 0 })
                 fiatShitcoinData[i].circulatingSupply = formatCurrency(item.M2*supplyUnitsNumber, { format: '%v %c', code: item.code, minFraction: 0, maxFraction: 0 })
-                fiatShitcoinData[i].flag = require(`../assets/flags/${item.flag}.png`)
+                if (item.flag) {
+                fiatShitcoinData[i].displayFlag = `./images/flags/${item.flag}.png`
+                }
             })
             return fiatShitcoinData
         }

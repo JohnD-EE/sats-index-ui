@@ -7,6 +7,7 @@ import Catechism from '../views/Catechism.vue'
 import Satoshi from '../views/Satoshi.vue'
 import Blog from '../views/Blog.vue'
 import Offer from '../views/Offer.vue'
+import WhosWho from '../views/WhosWho.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -51,7 +52,12 @@ const routes = [
         path: '/offer',
         name: 'Offer',
         component: Offer
-    }             
+    },
+    {
+        path: '/whos-who',
+        name: 'WhosWho',
+        component: WhosWho
+    }                 
 ]
 
 const router = new VueRouter({

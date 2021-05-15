@@ -2,24 +2,25 @@
     <div>
         <v-container>
             <v-layout row wrap>
-                <v-flex xs12 sm6>
+                <v-flex xs12 sm8>
                     <h2>The purchasing power of your Sats</h2>
-                        <p class="body-2">There are 100 million Satoshis to a Bitcoin. When people no longer have any trust in government issued fiat shitcoins, we may see Sats becoming a globally accepted standard <strong>unit of account</strong> so that talking about the value of things in Sats may be commonplace in the not too distant future.</p>
-                    </v-flex>
+                    <p class="body-1">How divisible are bitcoins...? <span class="font-italic">Eventually at most only 21 million coins for 6.8 billion people in the world if it really gets huge. But don't worry, there are... a total of 8 decimal places internally..."</span>
+                        <span class="font-weight-medium"> - Satoshi Nakamoto, Bitcoin Talk, 6th Feb 2010</span></p>
+                         </v-flex>
             </v-layout>
         </v-container>
-        <v-container  class="mt-10">
+        <v-container  class="mt-10 mb-10">
             <v-layout row wrap>
                 
                 <v-flex xs12>
                     <v-sheet
-  color="grey lighten-4"
-  elevation="3"
-  outlined
-  tile
+                    color="grey lighten-4"
+                    elevation="3"
+                    outlined
+                    tile
 >
-<div class="pa-5">
-<h5 class="">A basket of goods and services</h5>
+                    <div class="pa-5">
+                    <h5 class="">A basket of goods and services</h5>
                     <p class="body-2">A selection of everyday and aspirational goods, services and other benchmarks to assess the purchasing power of your Sats.</p>
                 </div>
                     <template>
@@ -38,7 +39,7 @@
                                     <td width="{ item.width }">
                                         <v-container>
                                             <v-layout row>
-                                                <v-flex xs5 sm4 md3 lg3>
+                                                <v-flex xs5 sm5 md4 lg3>
                                         <v-avatar size="32" tile>
                                             <img 
                                                 :src="item.logoSource" 
@@ -46,7 +47,7 @@
                                                 >
                                                 </v-avatar>
                                                 </v-flex>
-                                                <v-flex xs7 sm8 md9 lg9>
+                                                <v-flex xs7 sm7 md8 lg9>
                                             <span  class="font-weight-medium">
                                             {{ item.name }}
                                         </span>
@@ -111,6 +112,15 @@
                 </v-flex>
             </v-layout>
         </v-container>
+        <v-container>
+            <v-layout row wrap>
+                <v-flex xs12 sm9>
+                    <h3>What can we learn from this?</h3>
+                    <p>Here we will have some learning points about the fundamentals of money as a unit of account and what free market price discovery tells us about the relative value of things.</p>
+                    <p class="body-1 mt-15">Thanks to Satoshi, there are 100 million Sats to a Bitcoin to give a capped supply of 2.1 Quadrillion Satoshis. When people no longer have any trust in government issued fiat shitcoins, we may see Sats becoming a globally accepted standard <strong>unit of account</strong> so that talking about the value of things in Sats may be commonplace in the not too distant future.</p>
+                    </v-flex>
+            </v-layout>
+        </v-container>
     </div>
 </template>
 
@@ -122,6 +132,7 @@ import formatCurrency from 'format-currency'
   export default {
     data: () => ({
         trillion: 1000000000000,
+        billion: 1000000000,
         formatCurrency: formatCurrency,
         exchangeData: exchange.exchangeData,
         basketItems: basket.basketItems,
@@ -183,7 +194,8 @@ import formatCurrency from 'format-currency'
                     }
                 }
                 if (item.logo) {
-                    basketItems[i].logoSource = require('../assets/brandLogos/' + item.logo)
+                    //basketItems[i].logoSource = require('../assets/brandLogos/' + item.logo)
+                    basketItems[i].logoSource = './images/brandLogos/' + item.logo
                 }
             //Formatting Currencies
             if ((basketItems[i].gbp) / 100 > this.trillion) {
