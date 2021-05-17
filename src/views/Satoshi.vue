@@ -11,5 +11,6 @@ peer-to-peer, with no trusted third party."</span><span class="font-weight-mediu
                 </v-flex>
             </v-layout>
         </v-container>
+        
     </div>
 </template>

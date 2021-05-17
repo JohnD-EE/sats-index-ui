@@ -72,27 +72,34 @@
     >
       <v-card-text>
         <v-btn
-          v-for="icon in icons"
-          :key="icon"
           class="mx-4 white--text"
-          icon
-        >
-          <v-icon size="24px">
-            {{ icon }}
-          </v-icon>
+          text
+          :ripple="false"
+          plain href="https://twitter.com/SatsIndex" 
+          target="_blank"
+          >
+          <v-icon size="24px" class="mr-3">mdi-twitter</v-icon> Follow @SatsIndex on Twitter
         </v-btn>
+        
+        
       </v-card-text>
-
-      <v-card-text class="white--text pt-0">
-        SatsIndex is envisioning a future world where Bitcoin becomes an accepted standard, as a store of value, perhaps playing the role of a reserve currency against which many national currencies are pegged. 
-        If this transpires it is likely that the smallest denomination of bitcoin, the Satoshi, would become an accepted <strong>unit of account</strong> for everyday items. 
-        Satoshis are already referred to as Sats, so the aim of SatsIndex is to take a candid look at how we might value things in Sats, as well as helping people to extend their curiosity beyond Bitcoin and Sats prices to really understand money and economics, and why the world needs Bitcoin as digital Gold 2.0
+      <v-divider></v-divider>
+      <v-card-text>
+        <p class="display-1 white--text text-center">21 Million BTC</p>
+        <p class="display-2 white--text text-center">2.1 Quadrillion Sats</p>
+        <p class="display-3 white--text text-center">7.8+ Billion People</p>
+        <p class="display-4 white--text text-center">&sect;269,230 Sats Each</p>
+      </v-card-text>
+      <v-flex xs12 sm8 offset-sm2>
+      <v-card-text class="white--text pt-0 text-center pt-3 pb-3">
+        <p class="body-1">SatsIndex is envisioning a future world where Bitcoin becomes an accepted standard, as a store of value, perhaps playing the role of a reserve currency against which many national currencies are pegged. 
+        If this transpires it is likely that the smallest denomination of bitcoin, the Satoshi, would become an accepted <strong>unit of account</strong> for everyday items.</p>
+        <p class="body-1">Satoshis are already referred to as Sats, so the aim of SatsIndex is to take a candid look at how we might value things in Sats, as well as helping people to extend their curiosity beyond Bitcoin and Sats prices to really understand money and economics, and why the world needs Bitcoin as digital Gold 2.0</p>
               </v-card-text>
-              <v-card-text class="white--text pt-0">
+              </v-flex>
+              <v-card-text class="white--text pt-5 grey darken-1">
               RISK DISCLAIMER: This website is for learning and entertainment. It includes ideas and information about economics and finance which are not intended as investment advice. Investing in in cryptocurrency is complex and high risk and this website is not intended to advocate an investment strategy.
 </v-card-text>
-      <v-divider></v-divider>
-
       <v-card-text class="white--text">
         {{ new Date().getFullYear() }} — <strong>SatsIndex</strong>
       </v-card-text>
@@ -109,13 +116,7 @@ export default {
   name: 'App',
   data: () => ({
     worldPopulation: 7800000000,
-  btcInCirculation: 18698487,
-      icons: [
-        'mdi-facebook',
-        'mdi-twitter',
-        'mdi-instagram',
-        'mdi-telegram'
-      ]
+    btcInCirculation: 18698487
     }),
   components: {
   },
