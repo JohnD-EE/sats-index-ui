@@ -117,7 +117,10 @@ const whosWhoData = [
         name: 'Andreas Antonopoulus',
         bio: ['An influential speaker, teacher and podcaster in the Bitcoin domain since 2012, Andreas is now one of the most recognised and respected voices in the space, oozes charisma, and shares generously.', 'Andreas is definitely a Noob Friendly place to start'],
         image: 'https://pbs.twimg.com/profile_images/1362967502247129090/Q2ypSr9W_400x400.jpg',
-        web: [{ site: 'Twitter', url: 'https://twitter.com/aantonop'}],
+        web: [
+            { site: 'Twitter', url: 'https://twitter.com/aantonop'},
+            { site: 'YouTube', url: 'https://www.youtube.com/user/aantonop' }
+        ],
         ratings: {
             libertarianism: {
                 rating: 75,
@@ -222,7 +225,7 @@ const whosWhoData = [
         image: 'https://pbs.twimg.com/profile_images/1361873587582472195/y57DiTYX_400x400.jpg',
         web: [
             { site: 'Twitter', url: 'https://twitter.com/maxkeiser' },
-            { site: 'Orange Pill', url: 'https://www.youtube.com/user/MaxKeiserTV' }
+            { site: 'YouTube: Orange Pill', url: 'https://www.youtube.com/user/MaxKeiserTV' }
         ],
         ratings: {
             libertarianism: {

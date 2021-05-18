@@ -49,9 +49,6 @@
           <v-btn text :ripple="false" plain to="/satoshi">
             Satoshi
           </v-btn>
-          <v-btn text :ripple="false" plain to="/blog">
-            Blog
-          </v-btn>
         </v-toolbar-items>
         <v-app-bar-nav-icon>
         </v-app-bar-nav-icon>

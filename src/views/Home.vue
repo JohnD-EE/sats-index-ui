@@ -4,7 +4,7 @@
             <v-layout row wrap>
                 <v-flex xs12 sm8>
                     <h2>The purchasing power of your Sats</h2>
-                    <p class="body-1">How divisible are bitcoins...? <span class="font-italic">Eventually at most only 21 million coins for 6.8 billion people in the world if it really gets huge. But don't worry, there are... a total of 8 decimal places internally..."</span>
+                    <p class="body-1">How divisible are bitcoins...? <span class="font-italic">"Eventually at most only 21 million coins for 6.8 billion people in the world if it really gets huge. But don't worry, there are... a total of 8 decimal places internally..."</span>
                         <span class="font-weight-medium"> - Satoshi Nakamoto, Bitcoin Talk, 6th Feb 2010</span></p>
                          </v-flex>
             </v-layout>
@@ -117,7 +117,8 @@
                 <v-flex xs12 sm9>
                     <h3>What can we learn from this?</h3>
                     <p>Here we will have some learning points about the fundamentals of money as a unit of account and what free market price discovery tells us about the relative value of things.</p>
-                    <p class="body-1 mt-15">Thanks to Satoshi, there are 100 million Sats to a Bitcoin to give a capped supply of 2.1 Quadrillion Satoshis. When people no longer have any trust in government issued fiat shitcoins, we may see Sats becoming a globally accepted standard <strong>unit of account</strong> so that talking about the value of things in Sats may be commonplace in the not too distant future.</p>
+                    <p class="body-1 mt-15">Thanks to Satoshi, there are 100 million Sats to a Bitcoin to give a capped supply of 2.1 Quadrillion Satoshis. When people no longer have any trust in government issued fiat shitcoins, and the world is denominated in Bitcoin, we may see Sats becoming a globally accepted standard <strong>unit of account</strong>.
+                    <p>Talking about the value of things in Sats may be commonplace in the not too distant future.</p>
                     </v-flex>
             </v-layout>
         </v-container>

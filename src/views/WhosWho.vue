@@ -23,7 +23,8 @@
                 
                 <v-flex xs12 sm6 offset-sm-3
                     >
-                    <div v-for="(item, i) in whosWhoData"
+                    <div 
+                    v-for="(item, i) in whosWhoData"
                     :key="i"
                     class="mt-5 mb-5">
                     <v-card
@@ -55,6 +56,21 @@
                             <p>{{ bio }}</p>
                         </div>
                         </v-card-text>
+                        <v-list class="transparent">
+                        <v-list-item
+                        >
+                            <v-list-item-title>Integrity: 95% | Entertainment: 5%</v-list-item-title>
+                            <v-list-item-subtitle class="text-right">
+                            Rating: 87% <v-btn
+                                    icon
+                                    @click="show = !show"
+                                >
+                                    <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                                </v-btn>
+                            </v-list-item-subtitle>
+                        </v-list-item>
+                        </v-list>
+                        <v-divider></v-divider>
                         <v-card-actions>
                         <v-btn
                             text
@@ -91,106 +107,7 @@ export default {
         whosWhoData: whosWho.whosWhoData
     }),
     computed: {
-        whosWhoDatad () {
-            //console.log(this.whosWho)
-            return [
-    {
-        name: 'Satoshi Nakamoto',
-        bio: 'The pseudonymous creator of Bitcoin',
-        image: '',
-        web: [{ site: 'bitcoin.org', url: 'https://bitcoin.org/'}],
-        ratings: {
-            libertarianism: {
-                rating: 99,
-                reason: 'From the white paper and other communications via email and forum posts he seems strongly rooted in Austrian Economics / Libertarian thinking.'
-            },
-            bitcoiner: {
-                rating: 100,
-                reason: 'Well, obviously'
-            },
-            tech: {
-                rating: 99,
-                reason: 'Clearly an abstract thinker, creating bitcoin out of the intersection of other technical innovations. As he said, \'I am better with code than with words though\', however Satoshi\'s code itself wasn\'t flawless'
-            },
-            economics: {
-                rating: 99,
-                reason: 'A great understanding of human behaviour, economic incentives and rewards, as well as a true understanding of money'
-            },
-            entertaining: {
-                rating: 15,
-                reason: 'We don\'t know him personally, there\'s not much evidence of humour but his sarcastic message in the genesis block earns him some points: \'Chancellor on Brink of Second Bailout for Banks\''
-            },
-            controversial: {
-                rating: 99,
-                reason: 'He\'s disrupted everything'
-            },
-            understandability: {
-                rating: 20,
-                reason: 'He made the effort to communicate his thinking in the right way, we don\t have much to go on though, other than his writings.'
-            },
-            integrity: {
-                rating: 99,
-                reason: 'He did the right thing and walked away from the project to leave it leaderless and decentralised, and he has never spent his vast bitcoin wealth.'
-            },
-            lovability: {
-                rating: -25,
-                reason: 'We just don\'t know him, but apparently he could come across as a bit harsh sometimes'
-            },
-            influence: {
-                rating: 100,
-                reason: 'He\'s changed the world forever, and he could do a fair bit of damage if he wanted.'
-            }
-        }
-    },
-    {
-        name: 'Andreas Antonopoulus',
-        bio: 'Andreas Bio',
-        web: [{ site: 'Twitter', url: 'https://twitter.com/aantonop'}],
-        ratings: {
-            libertarianism: {
-                rating: 75,
-                reason: 'Certainly an advocate of free market economics, but also seems to play by the rules within the existing system'
-            },
-            bitcoiner: {
-                rating: 50,
-                reason: 'Strong advocte for the Bitcoin eco-system but also embraces other cryptocurrencies'
-            },
-            tech: {
-                rating: 75,
-                reason: 'Appreciation of the tech but not a devoted coder'
-            },
-            economics: {
-                rating: 75,
-                reason: 'Seems to understand real world economics but not necessarily a gura on fincance and economics'
-            },
-            entertaining: {
-                rating: 95,
-                reason: 'Brilliant presentations, peppared with jokes, doesn\'t take himself too seriously'
-            },
-            controversial: {
-                rating: 50,
-                reason: 'Too nice to be overly controversial'
-            },
-            understandability: {
-                rating: 99,
-                reason: 'Surely one of the best explainers in the cryptocurrency space'
-            },
-            integrity: {
-                rating: 95,
-                reason: 'Been in the Bitcoin domain for ages, consistent adherent'
-            },
-            lovability: {
-                rating: 99,
-                reason: 'Surely the sweetest guy out there'
-            },
-            influence: {
-                rating: 90,
-                reason: 'Huge influence over the years'
-            }
-        }
-    }
-];
-        }
+        //
     }
 }
 </script>
