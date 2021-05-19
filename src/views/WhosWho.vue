@@ -56,12 +56,13 @@
                             <p>{{ bio }}</p>
                         </div>
                         </v-card-text>
+                        <v-divider></v-divider>
                         <v-list class="transparent">
                         <v-list-item
                         >
-                            <v-list-item-title>Integrity: 95% | Entertainment: 5%</v-list-item-title>
+                            <v-list-item-subtitle>{{ getScoreHighlights(item.ratings) }}</v-list-item-subtitle>
                             <v-list-item-subtitle class="text-right">
-                            Rating: 87% <v-btn
+                            Total Rating: {{ item.averageScore }}% <v-btn
                                     icon
                                     @click="show = !show"
                                 >
@@ -104,10 +105,47 @@ import whosWho from '../data/whoswho.js'
 
 export default {
     data: () => ({
-        whosWhoData: whosWho.whosWhoData
+        whosWho: whosWho
     }),
     computed: {
-        //
+        whosWhoData () {
+            let whosWhoData = this.whosWho.whosWhoData
+            whosWhoData.forEach((item, i) => {
+                whosWhoData[i].averageScore = this.getTotalScore(item.ratings)
+                console.log('data', whosWhoData[i])
+            })
+            whosWhoData.sort((a, b) => (a.averageScore < b.averageScore) ? 1 : -1)
+            return whosWhoData
+        }
+    },
+    methods: {
+        getScoreHighlights(ratings) {
+            if (ratings) {
+                return 'Superpower: Influence ' + ratings.influence.rating + '%'
+            }
+        },
+        getTopStrength(ratings) {
+            if (ratings) {
+                //
+            }
+        },
+        getTotalScore(ratings) {
+            if (ratings) {
+                const libertarianism = ratings.libertarianism.rating
+                const bitcoiner = ratings.bitcoiner.rating
+                const tech = ratings.tech.rating
+                const economics = ratings.economics.rating
+                const entertaining = ratings.entertaining.rating
+                const controversial = ratings.controversial.rating
+                const noobfriendly = ratings.noobfriendly.rating
+                const integrity = ratings.integrity.rating
+                const lovability = ratings.lovability.rating
+                const influence = ratings.influence.rating
+                const average = Math.round((libertarianism + bitcoiner + tech + economics + entertaining + 
+                controversial + noobfriendly + integrity + lovability + influence) / 10)
+                return average
+            }
+        },
     }
 }
 </script>
