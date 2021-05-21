@@ -70,48 +70,63 @@ const whosWhoData = [
             { site: 'bitcoin.org', url: 'https://bitcoin.org/'},
             { site: 'BTC Whitepaper', url: 'https://bitcoin.org/bitcoin.pdf' }
         ],
-        ratings: {
-            libertarianism: {
+        ratings: [
+            {
+                metric: 'libertarianism',
                 rating: 99,
                 reason: 'From the white paper and other communications via email and forum posts he seems strongly rooted in Austrian Economics / Libertarian thinking.'
             },
-            bitcoiner: {
+            {
+                metric: 'bitcoiner',
                 rating: 100,
                 reason: 'Well, obviously'
             },
-            tech: {
+            {
+                metric: 'tech',
                 rating: 99,
                 reason: 'Clearly an abstract thinker, creating bitcoin out of the intersection of other technical innovations. As he said, \'I am better with code than with words though\', however Satoshi\'s code itself wasn\'t flawless'
             },
-            economics: {
+            {
+                metric: 'economics',
                 rating: 99,
-                reason: 'A great understanding of human behaviour, economic incentives and rewards, as well as a true understanding of money'
+                reason: 'A great understanding of human behaviour, economic incentives and rewards, as well as a deep understanding of money. The components existed before Satoshi, but the genius is in the implementation.'
             },
-            entertaining: {
+            {
+                metric: 'entertaining',
                 rating: 15,
                 reason: 'We don\'t know him personally, there\'s not much evidence of humour but his sarcastic message in the genesis block earns him some points: \'Chancellor on Brink of Second Bailout for Banks\''
             },
-            controversial: {
+            {
+                metric: 'controversial',
                 rating: 99,
                 reason: 'He\'s disrupted everything'
             },
-            noobfriendly: {
+            {
+                metric: 'noobfriendly',
                 rating: 20,
                 reason: 'He made the effort to communicate his thinking in the right way, we don\t have much to go on though, other than his writings.'
             },
-            integrity: {
-                rating: 99,
+            {
+                metric: 'integrity',
+                rating: 95,
                 reason: 'He did the right thing and walked away from the project to leave it leaderless and decentralised, and he has never spent his vast bitcoin wealth.'
             },
-            lovability: {
+            {
+                metric: 'lovability',
                 rating: 0,
                 reason: 'We just don\'t know him, but apparently he could come across as a bit harsh sometimes'
             },
-            influence: {
-                rating: 100,
-                reason: 'He\'s changed the world forever, and he could do a fair bit of damage if he wanted.'
-            }
-        }
+            {
+                metric: 'influence',
+                rating: 90,
+                reason: 'He\'s changed the world forever, and he could do a fair bit of damage if he wanted, but his influence and importance in the Bitcoin project diminishes over time'
+            },
+            {
+                metric: 'educator',
+                rating: 95,
+                reason: 'His creation has educated so many people about money, but he\'s not currently actively educating'
+            },
+        ]
     },
     {
         name: 'Andreas Antonopoulus',
@@ -121,48 +136,58 @@ const whosWhoData = [
             { site: 'Twitter', url: 'https://twitter.com/aantonop'},
             { site: 'YouTube', url: 'https://www.youtube.com/user/aantonop' }
         ],
-        ratings: {
-            libertarianism: {
+        ratings: [
+            {
+                metric: 'libertarianism',
                 rating: 75,
                 reason: 'Certainly an advocate of free market economics, but also seems to play by the rules within the existing system'
             },
-            bitcoiner: {
+            {
+                metric: 'bitcoiner',
                 rating: 50,
                 reason: 'Strong advocte for the Bitcoin eco-system but also embraces other cryptocurrencies'
             },
-            tech: {
+            {
+                metric: 'tech',
                 rating: 95,
                 reason: 'Has a degree in Computer Science and Data Communications and Distributed Systems from University College London. Very stong in Security'
             },
-            economics: {
+            {
+                metric: 'economics',
                 rating: 75,
                 reason: 'Seems to understand real world economics but not necessarily a guru on fincance and economics'
             },
-            entertaining: {
-                rating: 95,
+            {
+                metric: 'entertaining',
+                rating: 100,
                 reason: 'Brilliant presentations, peppared with jokes, doesn\'t take himself too seriously'
             },
-            controversial: {
+            {
+                metric: 'controversial',
                 rating: 50,
                 reason: 'Too nice to be overly controversial'
             },
-            noobfriendly: {
-                rating: 99,
+            {
+                metric: 'noobfriendly',
+                rating: 100,
                 reason: 'Surely one of the best explainers in the cryptocurrency space'
             },
-            integrity: {
+            {
+                metric: 'integrity',
                 rating: 95,
                 reason: 'Been in the Bitcoin domain for ages, consistent adherent'
             },
-            lovability: {
+            {
+                metric: 'lovability',
                 rating: 99,
                 reason: 'Surely the sweetest guy out there'
             },
-            influence: {
+            {
+                metric: 'influence',
                 rating: 90,
                 reason: 'Huge influence over the years'
             }
-        }
+        ]
     },
     {
         name: 'Michael Saylor',
@@ -173,48 +198,58 @@ const whosWhoData = [
         ],
         image: 'https://pbs.twimg.com/profile_images/1391739753540853762/CDFXycp2_400x400.jpg',
         web: [{ site: 'Twitter', url: 'https://twitter.com/michael_saylor'}],
-        ratings: {
-            libertarianism: {
+        ratings: [
+            {
+                metric: 'libertaianism',
                 rating: 65,
                 reason: 'Libertarian leaning, judging by his actions, but is libertarianism his driving principle?'
             },
-            bitcoiner: {
+            {
+                metric: 'bitcoiner',
                 rating: 95,
                 reason: 'He seems all in on Bitcoin, not sure if he holds other crypto'
             },
-            tech: {
+            {
+                metric: 'tech',
                 rating: 60,
                 reason: 'A rocket scientist background, so not tech averse, not sure if he qualifies as Bitcoin tech guru'
             },
-            economics: {
+            {
+                metric: 'economics',
                 rating: 95,
                 reason: 'Has a good grasp of real life economics'
             },
-            entertaining: {
+            {
+                metric: 'entertaining',
                 rating: 50,
                 reason: 'He seems to want to inform, rather than entertain'
             },
-            controversial: {
+            {
+                metric: 'controversial',
                 rating: 85,
                 reason: 'The more conservative CFOs and shareholders will certainly see him as controversial'
             },
-            noobfriendly: {
+            {
+                metric: 'noobfriendly',
                 rating: 15,
                 reason: 'He goes quite deep, probably not the best place for a total novice to start unless well versed in corpotate financials'
             },
-            integrity: {
+            {
+                metric: 'integrity',
                 rating: 90,
                 reason: 'Well he has skin in the game, that\'s what it\'s all about'
             },
-            lovability: {
+            {
+                metric: 'lovability',
                 rating: 65,
                 reason: 'Seems quite friendly and approachable but very matter of fact'
             },
-            influence: {
+            {
+                metric: 'influence',
                 rating: 99,
                 reason: 'Hugely influential for corporate and institutional investors, a massive figure in Bitcoin since 2020'
             }
-        }
+        ]
     },
     {
         name: 'Max Keiser',
@@ -227,48 +262,58 @@ const whosWhoData = [
             { site: 'Twitter', url: 'https://twitter.com/maxkeiser' },
             { site: 'YouTube: Orange Pill', url: 'https://www.youtube.com/user/MaxKeiserTV' }
         ],
-        ratings: {
-            libertarianism: {
+        ratings: [
+            {
+                metric: 'libertarianism',
                 rating: 95,
                 reason: 'Endorses the soveriegnty of the individual while chastising the legacy authoritarian establishment'
             },
-            bitcoiner: {
+            {
+                metric: 'bitcoiner',
                 rating: 100,
                 reason: 'Been shouting about Bitcoin since 2011, when it was $1 USD'
             },
-            tech: {
+            {
+                metric: 'tech',
                 rating: 5,
                 reason: 'More fiancnce than tech'
             },
-            economics: {
+            {
+                metric: 'economics',
                 rating: 99,
                 reason: 'He knows his Austrian Economics'
             },
-            entertaining: {
+            {
+                metric: 'entertaining',
                 rating: 100,
                 reason: 'Max is great entertainment value, especially when he\'s on a rant'
             },
-            controversial: {
+            {
+                metric: 'controversial',
                 rating: 90,
                 reason: 'If you are Jamie Dimon or otherwise rooted to legacy banking, you may find Max somewhat offensive'
             },
-            noobfriendly: {
+            {
+                metric: 'noobfriendly',
                 rating: 50,
                 reason: 'Without a grounding in libertarian thinking, the financial markets and macroeconomics a Noob may struggle with Max, but patience pays.'
             },
-            integrity: {
+            {
+                metric: 'integrity',
                 rating: 85,
                 reason: 'Seems pretty straigt, honest, and consistent (However he was once a broker and options trader)'
             },
-            lovability: {
+            {
+                metric: 'lovability',
                 rating: 90,
                 reason: 'Stacey seems to put up with him'
             },
-            influence: {
+            {
+                metric: 'influence',
                 rating: 75,
                 reason: 'Strong influence, especially in the early years of Bitcoin, purhaps he\'s since been overtaken by bigger Bitcoin celebrities.'
             }
-        }
+        ]
     },
 ];
 

@@ -120,9 +120,16 @@ export default {
     },
     methods: {
         getScoreHighlights(ratings) {
-            if (ratings) {
-                return 'Superpower: Influence ' + ratings.influence.rating + '%'
-            }
+            let topStrength = ''
+            let topRating = -999
+            ratings.forEach((item) => {
+                if (item.rating > topRating) {
+                    topRating = item.rating
+                    topStrength = item.metric
+                }
+            })
+            topStrength = topStrength.charAt(0).toUpperCase() + topStrength.slice(1) //capitalise first letter
+            return 'Top Strength is ' + topStrength + ': ' + topRating + '%'
         },
         getTopStrength(ratings) {
             if (ratings) {
@@ -130,22 +137,16 @@ export default {
             }
         },
         getTotalScore(ratings) {
-            if (ratings) {
-                const libertarianism = ratings.libertarianism.rating
-                const bitcoiner = ratings.bitcoiner.rating
-                const tech = ratings.tech.rating
-                const economics = ratings.economics.rating
-                const entertaining = ratings.entertaining.rating
-                const controversial = ratings.controversial.rating
-                const noobfriendly = ratings.noobfriendly.rating
-                const integrity = ratings.integrity.rating
-                const lovability = ratings.lovability.rating
-                const influence = ratings.influence.rating
-                const average = Math.round((libertarianism + bitcoiner + tech + economics + entertaining + 
-                controversial + noobfriendly + integrity + lovability + influence) / 10)
-                return average
-            }
-        },
+            console.log('ratings', ratings)
+            let total = 0
+            let count = 0
+            ratings.forEach((item) => {
+                    total += item.rating
+                    count ++
+                })
+            let average = Math.round(total / count)
+            return average
+        }
     }
 }
 </script>

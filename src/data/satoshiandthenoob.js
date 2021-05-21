@@ -1,7 +1,9 @@
 const interview = 
     {
+        chapter: 1,
         title: 'Anonymity',
-        startsWith: 'noob',
+        subtitle: 'Why all the fuss about hiding your identity?',
+        startsWith: 'Noob',
         text: [
             'Hello Satoshi', //N
             'Hello Noob', //S
