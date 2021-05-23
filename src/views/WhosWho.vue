@@ -11,7 +11,7 @@
         </v-container>
         <v-container row wrap mt-15>
             <v-layout>
-                <v-flex xs12 sm6 offset-sm-3>
+                <v-flex xs12 sm6 offset-sm-3>                    
                     <h3>Bitcoin Top Trumps</h3>
                     <p class="body-1">This section will evolve into gameified Who's Who in Bitcoin based on the popular UK Top Trumps card game</p>
                     <p class="body-1">Learn about the movers and shakers, the devils and angels of Bitcoin through a fun nostalgic card game.</p>
@@ -64,13 +64,41 @@
                             <v-list-item-subtitle class="text-right">
                             Total Rating: {{ item.averageScore }}% <v-btn
                                     icon
-                                    @click="show = !show"
+                                    @click="toggleCard(i)"
                                 >
-                                    <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                                    <v-icon>{{ toggleCards.includes(i) ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                                 </v-btn>
                             </v-list-item-subtitle>
                         </v-list-item>
                         </v-list>
+
+                         <v-expand-transition>
+      
+        <v-card-text
+        v-if="toggleCards.includes(i)"
+        class="transition-fast-in-fast-out v-card--reveal">
+        
+          <v-row
+          v-for="(rating, r) in item.ratings"
+            :key="r"
+          class="mt-0"
+          >
+          <v-col
+          cols="8"
+            >
+            <p class="mb-0 headline">{{ getRatingMetric(rating.metric) }}</p>
+            <p class="body-2 font-weight-regular">{{ rating.reason }}</p>
+            </v-col>
+            <v-col
+            cols="4"
+            >
+             <p class="text-right headline">{{ rating.rating }}%</p>
+            </v-col>
+            </v-row>
+                            
+          </v-card-text>
+    </v-expand-transition>
+
                         <v-divider></v-divider>
                         <v-card-actions>
                         <v-btn
@@ -84,6 +112,7 @@
                             {{ web.site }}
                         </v-btn>
                         </v-card-actions>
+
                     </v-card>
                     </div>
                 </v-flex>
@@ -93,7 +122,8 @@
             <v-layout>
                 <v-flex xs12 sm10 offset-sm-1>
                     <h3 class="text-center mt-10">More to come...</h3>
-                    <p class="text-center body mb-10 ">This is just a start, more profiles will be added over time.</p>
+                    <p class="text-center">This is just a start, more profiles will be added over time.</p>
+                    <p class="text-center">RATINGS: The ratings given to the listed influencers in Bitcoin are currently assigned in a subjective way without any methodological rigour. They more for fun than fact. Should you disagree with the assessments please contact SatsIndex.com with an alternative suggestion. The ratings will soon be available in an open source GitHub repository where they may be critiqued, modified and extended by others.</p>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -105,20 +135,36 @@ import whosWho from '../data/whoswho.js'
 
 export default {
     data: () => ({
-        whosWho: whosWho
+        whosWho: whosWho,
+        toggleCards: []
     }),
     computed: {
         whosWhoData () {
             let whosWhoData = this.whosWho.whosWhoData
             whosWhoData.forEach((item, i) => {
                 whosWhoData[i].averageScore = this.getTotalScore(item.ratings)
-                console.log('data', whosWhoData[i])
+                whosWhoData[i].show = false
+                let ratings = item.ratings.sort((a, b) => (a.rating < b.rating) ? 1 : -1)
+                whosWhoData[i].ratings = ratings
             })
+            
             whosWhoData.sort((a, b) => (a.averageScore < b.averageScore) ? 1 : -1)
             return whosWhoData
         }
     },
     methods: {
+        toggleCard(i) {
+            let toggleCards = this.toggleCards
+            if (toggleCards.includes(i)) {
+                const index = toggleCards.indexOf(i);
+                if (index > -1) {
+                    toggleCards.splice(index, 1);
+                }
+            } else {
+                toggleCards.push(i)
+            }
+            this.toggleCards = toggleCards
+        },
         getScoreHighlights(ratings) {
             let topStrength = ''
             let topRating = -999
@@ -129,7 +175,7 @@ export default {
                 }
             })
             topStrength = topStrength.charAt(0).toUpperCase() + topStrength.slice(1) //capitalise first letter
-            return 'Top Strength is ' + topStrength + ': ' + topRating + '%'
+            return 'Top Strength: ' + topStrength
         },
         getTopStrength(ratings) {
             if (ratings) {
@@ -137,7 +183,6 @@ export default {
             }
         },
         getTotalScore(ratings) {
-            console.log('ratings', ratings)
             let total = 0
             let count = 0
             ratings.forEach((item) => {
@@ -146,6 +191,47 @@ export default {
                 })
             let average = Math.round(total / count)
             return average
+        },
+        getRatingMetric(metric) {
+            let output = ''
+            switch(metric) {
+                case 'libertarianism':
+                    output = 'Libertarianism'
+                    break
+                case 'bitcoiner':
+                    output = 'Bitcoiner'
+                    break
+                case 'tech':
+                    output = 'Tech Savvy'
+                    break
+                case 'economics':
+                    output = 'Economics Savvy'
+                    break
+                case 'entertaining':
+                    output = 'Entertaining'
+                    break
+                case 'controversial':
+                    output = 'Controversial'
+                    break
+                case 'noobfriendly':
+                    output = 'Noob Friendly'
+                    break
+                case 'integrity':
+                    output = 'Integrity'
+                    break
+                case 'lovability':
+                    output = 'Lovability'
+                    break
+                case 'influence':
+                    output = 'Influence'
+                    break
+                case 'educator':
+                    output = 'Educator'
+                    break
+                default:
+                    output = 'N/A'
+                }
+            return output
         }
     }
 }

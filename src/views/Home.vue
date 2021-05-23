@@ -9,6 +9,14 @@
                          </v-flex>
             </v-layout>
         </v-container>
+        <v-container row wrap mt-15>
+            <v-layout>
+                <v-flex xs12 sm6 offset-sm-3>
+                    <h3>We're just getting starterd...</h3>
+                    <p>This website aims to demistify Bitcoin and entertiain the curious minded by being accessble to Noobs and informatative to OGs. Please come back from time to time as this resource grows...</p>
+                </v-flex>
+            </v-layout>
+        </v-container>
         <v-container  class="mt-10 mb-10">
             <v-layout row wrap>
                 
@@ -59,7 +67,7 @@
                                     <td class="text-right">
                                         <div>
                                         <span class="font-weight-medium">
-                                            {{ item.satsFormatted }}
+                                            <i class="fak fa-satoshisymbol-solid mr-1"></i>{{ item.satsFormatted }}
                                         </span>
                                         </div>
                                         <div>
@@ -114,10 +122,13 @@
         </v-container>
         <v-container>
             <v-layout row wrap>
-                <v-flex xs12 sm9>
-                    <h3>What can we learn from this?</h3>
+                <v-flex xs12 sm8 offset-sm-2>
+                    <h3>Things to Ponder:</h3>
+                    <p>People are easily confused by Bitcoin, it is misunderstood, mischaracterised, and misconstrued. It takes time and effort to filter out the noise and make sense of it all. So we have to be patient with those who see it as a bizzare waste of computing power to solve nonsensical 'puzzles' so that speculators and scammers can advantage themselves over the vulnerable. Without understanding its context, milennia of hubristic monetary policy and banking which subtly enslaves us all to what we commonly refer to as 'the system' which may turn against us at any moment, our Bitcoin beffudlement will continue.</p>
+                    <p>The sole purpose of this website is to recognise that with Bitcoin we are building the base layer of freedom for future generations. Satoshi may have conceived of (or discovered) Bitcoin but it's an ecosystem that needs the participation of users. We won't get their by shaming no-coiners or by propogating the black and white thinking of legacy media, we'll do better to step outside our world, see it from the perspective of the Noob, and patiently teach them about the Satoshi's beautiful gift to humanity.</p>
+                    <p>People's interest in Bitcoin may be sparked by speculation, but it teaches them about money, and they stay for the monetary and economic revolution.</p>
                     <p>Here we will have some learning points about the fundamentals of money as a unit of account and what free market price discovery tells us about the relative value of things.</p>
-                    <p class="body-1 mt-15">Thanks to Satoshi, there are 100 million Sats to a Bitcoin to give a capped supply of 2.1 Quadrillion Satoshis. When people no longer have any trust in government issued fiat shitcoins, and the world is denominated in Bitcoin, we may see Sats becoming a globally accepted standard <strong>unit of account</strong>.
+                    <p>Thanks to Satoshi, there are 100 million Sats to a Bitcoin to give a capped supply of 2.1 Quadrillion Satoshis. When people no longer have any trust in government issued fiat shitcoins, and the world is denominated in Bitcoin, we may see Sats becoming a globally accepted standard <strong>unit of account</strong>.
                     <p>Talking about the value of things in Sats may be commonplace in the not too distant future.</p>
                     </v-flex>
             </v-layout>

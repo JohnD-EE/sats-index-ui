@@ -70,7 +70,7 @@ const interview =
             'How long did it take you to create Bitcoin?', //N
             'Well, in the beginning, I said \'let there be blockchain\' and I saw that it was good, then after six days the Bitcoin codebase was complete. On the seventh, I rested.', //S
             'Oh, so you really do see yourself as a god?', //N
-            'Ha, I\'m joking, but I do find it funny to play with the deification of my pseudonym. I am not a god, far from it...', //S
+            'Ha, I\'m joking, but I do find it funny to play with the deification of my pseudonym. I am not a god, far from it. I don\'t feel like I created or invented Bitcoin, I feel more like I discovered it.', //S
         ]
     }
 

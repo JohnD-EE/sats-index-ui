@@ -3,7 +3,7 @@
         <v-container>
             <v-layout row wrap>
                 <v-flex xs12>
-                    <h2>Satoshi</h2>
+                    <h2>Satoshi and the Noob</h2>
                 </v-flex>
                 <v-flex xs12 sm8>
                     <p class="body-1"><span class="font-italic">"I've been working on a new electronic cash system that's fully
@@ -14,7 +14,7 @@ peer-to-peer, with no trusted third party."</span><span class="font-weight-mediu
         <v-container row wrap mt-15>
             <v-layout>
                 <v-flex xs12 sm6 offset-sm-3>
-                <h3>Satoshi and the Noob</h3>
+                <h3>A Fictitious Conversation with Satoshi</h3>
                 <p>Enjoy this series of imaginary conversations between Satoshi Nakamoto and a Noob to help you better understand why Bitcoin exists and how it works...</p>
                 <p>Disclaimer: The characters here are completely fictitious. There are differing opinions among Bitcoiners on how Satoshi should be talked about or represented. Please see this as a playful illustration to help educate those who are curious about Bitcoin's history and potential role in the world, rather than any kind of bastardisation of the Satoshi story.</p>
                 </v-flex>
