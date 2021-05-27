@@ -233,8 +233,8 @@ const whosWhoData = [
             },
             {
                 metric: 'bitcoiner',
-                rating: 95,
-                reason: 'He seems all in on Bitcoin, not sure if he holds other crypto'
+                rating: 65,
+                reason: 'While he seems all in on Bitcoin, his collusion with Elon Musk to \'fix\' the Bitcoin energy problem through a Bitcoin Mining Council is contrary to the anti-heroing Bitcoiner mantra'
             },
             {
                 metric: 'tech',
@@ -494,7 +494,7 @@ const whosWhoData = [
         name: 'Raoul Pal',
         bio: [
             'CEO and Co-Founder of Real Vision, an  investment platform helping people understand the complexities of finance, business and the global economy.',
-            'Raoul Pal is very active on social media, providing commentary and interviews to educate investors and the masses in Bitcoin and Crypto.'
+            'Raoul Pal is very active on social media, providing commentary and interviews to educate investors and the masses in Bitcoin and Crypto. His knowledge of traditional Money Markets helps to inform our understanding of DeFi by comparison.'
         ],
         image: 'https://pbs.twimg.com/profile_images/1134440835410538496/jrvVYXVY_400x400.jpg',
         web: [
@@ -602,7 +602,7 @@ const whosWhoData = [
             {
                 metric: 'controversial',
                 rating: 99,
-                reason: 'Jus ask Elon who called Pete Obnixious when triggering the collapse in May 2021'
+                reason: 'Jus ask Elon who called Pete \'obnoxious\' when triggering the collapse in May 2021'
             },
             {
                 metric: 'noobfriendly',
@@ -697,6 +697,77 @@ const whosWhoData = [
                 metric: 'educator',
                 rating: 10,
                 reason: 'Useful in the sphere of legacy finance, but mostly wrong about Bitcoin - or is he?'
+            }
+        ]
+    },
+    {
+        name: 'Robert Breedlove',
+        bio: [
+            'Through the concept of Parallax, when an object appears to change its position because the person observing it has changed their position, Breedlove encourages us to shift our perspectives to those presented by the digital age of the internet and Bitcoin.',
+            'Breedlove, who calls himself a \'freedom maximalist\' sees questioning the concept of money as the most significant thing we could be engaged in, in a world drowning in deception.',
+            'Describing Bitcoin as honest money, he sees it as a humanitarian movement exposing the deception of central banking, the greatest con in human history.'
+        ],
+        image: 'https://pbs.twimg.com/profile_images/1362530493095309314/JnIBLjJQ_400x400.jpg',
+        web: [
+            { site: 'Twitter', url: 'https://twitter.com/Breedlove22' },
+            { site: 'What Is Money? Podcast', url: 'https://whatismoneypodcast.com/' },
+            { site: 'Parallax Blog', url: 'https://www.parallaxdigital.io/blog' }
+        ],
+        ratings: [
+            {
+                metric: 'libertarianism',
+                rating: 100,
+                reason: 'A Freedom Maximalist, and a great teacher about freedom and self-sovereignty'
+            },
+            {
+                metric: 'bitcoiner',
+                rating: 99,
+                reason: 'Describes Bitcoin as Honest Money'
+            },
+            {
+                metric: 'tech',
+                rating: 10,
+                reason: 'Hard to know, doesn\'t seem to specialise much on the tech side of Bitcoin'
+            },
+            {
+                metric: 'economics',
+                rating: 99,
+                reason: 'Goes beyond economics looks for first principes, understands money from it\'s earliest conception'
+            },
+            {
+                metric: 'entertaining',
+                rating: 60,
+                reason: 'A great speaker, fascinating ideas, but not a showman'
+            },
+            {
+                metric: 'controversial',
+                rating: 50,
+                reason: 'Doesn\'t seem to court controversy like some Bitcoiners, but Central bankers will disagree vehemently with is Central Banking as a con mantra'
+            },
+            {
+                metric: 'noobfriendly',
+                rating: 75,
+                reason: 'Noobs would do well to take the time to listen to Breedlove, but may find his thinking a little heavy the first time around'
+            },
+            {
+                metric: 'integrity',
+                rating: 99,
+                reason: 'Seems all in, committed and consistent'
+            },
+            {
+                metric: 'lovability',
+                rating: 80,
+                reason: 'seems quite likeable, and apparently the ladies think he\'s hot'
+            },
+            {
+                metric: 'influence',
+                rating: 85,
+                reason: 'Hightly influential to those who have thought deeply about Bitcoin\'s potential impact on humanity'
+            },
+            {
+                metric: 'educator',
+                rating: 99,
+                reason: 'Author of fine in depth articles, and frequent podcaster, brings deep philosophical analysis'
             }
         ]
     },

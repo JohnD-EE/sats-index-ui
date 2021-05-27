@@ -15,7 +15,7 @@ peer-to-peer, with no trusted third party."</span><span class="font-weight-mediu
             <v-layout>
                 <v-flex xs12 sm6 offset-sm-3>
                 <h3>A Fictitious Conversation with Satoshi</h3>
-                <p>Enjoy this series of imaginary conversations between Satoshi Nakamoto and a Noob to help you better understand why Bitcoin exists and how it works...</p>
+                <p>Enjoy this series of imaginary conversations between Satoshi Nakamoto and a Noob to help you understand why Bitcoin exists and how it works...</p>
                 <p>Disclaimer: The characters here are completely fictitious. There are differing opinions among Bitcoiners on how Satoshi should be talked about or represented. Please see this as a playful illustration to help educate those who are curious about Bitcoin's history and potential role in the world, rather than any kind of bastardisation of the Satoshi story.</p>
                 </v-flex>
             </v-layout>

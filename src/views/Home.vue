@@ -120,19 +120,49 @@
                 </v-flex>
             </v-layout>
         </v-container>
-        <v-container>
-            <v-layout row wrap>
-                <v-flex xs12 sm8 offset-sm-2>
-                    <h3>Things to Ponder:</h3>
-                    <p>People are easily confused by Bitcoin, it is misunderstood, mischaracterised, and misconstrued. It takes time and effort to filter out the noise and make sense of it all. So we have to be patient with those who see it as a bizzare waste of computing power to solve nonsensical 'puzzles' so that speculators and scammers can advantage themselves over the vulnerable. Without understanding its context, milennia of hubristic monetary policy and banking which subtly enslaves us all to what we commonly refer to as 'the system' which may turn against us at any moment, our Bitcoin beffudlement will continue.</p>
-                    <p>The sole purpose of this website is to recognise that with Bitcoin we are building the base layer of freedom for future generations. Satoshi may have conceived of (or discovered) Bitcoin but it's an ecosystem that needs the participation of users. We won't get their by shaming no-coiners or by propogating the black and white thinking of legacy media, we'll do better to step outside our world, see it from the perspective of the Noob, and patiently teach them about the Satoshi's beautiful gift to humanity.</p>
-                    <p>People's interest in Bitcoin may be sparked by speculation, but it teaches them about money, and they stay for the monetary and economic revolution.</p>
-                    <p>Here we will have some learning points about the fundamentals of money as a unit of account and what free market price discovery tells us about the relative value of things.</p>
-                    <p>Thanks to Satoshi, there are 100 million Sats to a Bitcoin to give a capped supply of 2.1 Quadrillion Satoshis. When people no longer have any trust in government issued fiat shitcoins, and the world is denominated in Bitcoin, we may see Sats becoming a globally accepted standard <strong>unit of account</strong>.
-                    <p>Talking about the value of things in Sats may be commonplace in the not too distant future.</p>
-                    </v-flex>
+        
+
+<v-container row mt-5>
+            <v-layout>
+                
+                <v-flex xs12 sm6 offset-sm-3
+                    >
+                    <div 
+                    v-for="(item, i) in lessons"
+                    :key="i"
+                    class="mt-5 mb-5">
+                    <v-card
+                    class="mx-auto"
+                    >
+                        <v-card-text>
+                            <v-row>
+                            <v-col
+                            cols="10"
+                            >
+                            
+                        <p class="headline text--primary">
+                            {{ item.name }}
+                        </p>
+                            </v-col>
+                            <v-col
+                            cols="2"
+                            >
+                                
+                            </v-col>
+                            </v-row>
+                        <div v-for="(note, n) in item.notes"
+                            :key="n">
+                            <p>{{ note }}</p>
+                        </div>
+                        </v-card-text>
+                        <v-divider></v-divider>
+                        <v-card-text>ADVICE: {{ item.advice }}</v-card-text>
+                    </v-card>
+                    </div>
+                </v-flex>
             </v-layout>
-        </v-container>
+</v-container>
+
     </div>
 </template>
 
@@ -140,6 +170,7 @@
 import basket from '../data/basket.js'
 import exchange from '../data/exchange.js'
 import formatCurrency from 'format-currency'
+import lessonsSats from '../data/lessonsSats.js'
 
   export default {
     data: () => ({
@@ -148,6 +179,7 @@ import formatCurrency from 'format-currency'
         formatCurrency: formatCurrency,
         exchangeData: exchange.exchangeData,
         basketItems: basket.basketItems,
+        lessonsSats: lessonsSats,
       headers: [
         { text: 'Item',  align: 'start', sortable: false, value: 'name' },
         { text: 'Sats / BTC Price', align: 'end', value: 'btc', symbol: '&sect;' },
@@ -158,6 +190,13 @@ import formatCurrency from 'format-currency'
       ]
     }),
     computed: {
+        lessons () {
+            let lessons = this.lessonsSats.lessons
+            /*lessons.forEach((item, i) => {
+                //
+            })*/
+            return lessons
+        },
         BTCtoUSD () {
             return this.exchangeData.BTCtoUSD
         },

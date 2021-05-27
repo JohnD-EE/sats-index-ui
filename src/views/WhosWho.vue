@@ -15,6 +15,7 @@
                     <h3>Bitcoin Top Trumps</h3>
                     <p class="body-1">This section will evolve into gameified Who's Who in Bitcoin based on the popular UK Top Trumps card game</p>
                     <p class="body-1">Learn about the movers and shakers, the devils and angels of Bitcoin through a fun nostalgic card game.</p>
+                    <p>Remember though, that Bitcoin doesn't need heroes. Bitcoin is about freedom from the cult of the individual - that's why Satoshi left.</p>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -62,7 +63,7 @@
                         >
                             <v-list-item-subtitle>{{ getScoreHighlights(item.ratings) }}</v-list-item-subtitle>
                             <v-list-item-subtitle class="text-right">
-                            Total Rating: {{ item.averageScore }}% <v-btn
+                            Average Rating: {{ item.averageScore }}% <v-btn
                                     icon
                                     @click="toggleCard(i)"
                                 >

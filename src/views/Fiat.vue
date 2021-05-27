@@ -123,6 +123,7 @@
 import exchange from '../data/exchange.js'
 import zillions from '../data/zillions.js'
 import formatCurrency from 'format-currency'
+import lessonsFiat from '../data/lessonsFiat.js'
 
   export default {
     data: () => ({
@@ -130,7 +131,8 @@ import formatCurrency from 'format-currency'
         formatCurrency: formatCurrency,
         wordsToNumbers: zillions.wordsToNumbers,
         exchangeData: exchange.exchangeData,
-        fiatShitcoinData: exchange.fiatShitcoinData,
+        fiatShitcoinData: exchange.fiatShitcoinData,        
+        lessonsFiat: lessonsFiat,
         headers: [
             { text: 'Currency',  align: 'start', sortable: false, value: 'name' },
             { text: 'Price of one unit in Sats/USD', align: 'end', sortable: false, value: 'priceInSats', symbol: '&sect;' },
@@ -141,6 +143,13 @@ import formatCurrency from 'format-currency'
         ]
     }),
     computed: {
+        lessons () {
+            let lessons = this.lessonsFiat.lessons
+            /*lessons.forEach((item, i) => {
+                //
+            })*/
+            return lessons
+        },
         BTCtoUSD () {
             return this.exchangeData.BTCtoUSD
         },
