@@ -9,7 +9,11 @@
                 </v-flex>
             </v-layout>
         </v-container>
-        <v-container row wrap mt-15>
+        <app-learning-cards
+        :cards = "catechismList"
+        >
+        </app-learning-cards>
+        <v-container mt-15>
             <v-layout>
                 <v-flex xs12 sm6 offset-sm-3>
                 <h3>Definitions: Catechism</h3>
@@ -23,9 +27,32 @@
                 <p>These Bitcoin Catechisms will soon be placed into an Open Source Github repository where they may be critiqued, modified and extended by others.</p>
                 <h4 class="mt-5">Nic Carter's FUD Dice:</h4>
                 <p>In a similar vein to these Catechisms, Nic Carter created his <a href="https://medium.com/@nic__carter/how-to-critique-bitcoin-a-guide-3e36b26f9642" 
-          target="_blank">FUD Dice</a> as a guide for critiqing Bitcoin - The Catachisms here will answer the objections.</p>
+          target="_blank">FUD Dice</a> as a guide for critiquing Bitcoin - The Catachisms here will answer the objections.</p>
                 </v-flex>
             </v-layout>
         </v-container>
     </div>
 </template>
+
+<script>
+import learningCardsComponent from './../components/LearningCards.vue'
+import catechisms from '../data/catechisms.js'
+
+  export default {
+    data: () => ({
+        catechisms: catechisms
+    }),
+    components: {
+        'app-learning-cards': learningCardsComponent
+    },
+    computed: {
+        catechismList () {
+            let catechismList = this.catechisms.catechismList
+            /*catechismList.forEach((item, i) => {
+                //
+            })*/
+            return catechismList
+        }
+    }
+  }
+</script>

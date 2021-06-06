@@ -11,7 +11,7 @@ peer-to-peer, with no trusted third party."</span><span class="font-weight-mediu
                 </v-flex>
             </v-layout>
         </v-container>
-        <v-container row wrap mt-15>
+        <v-container mt-15>
             <v-layout>
                 <v-flex xs12 sm6 offset-sm-3>
                 <h3>A Fictitious Conversation with Satoshi</h3>
@@ -54,7 +54,7 @@ peer-to-peer, with no trusted third party."</span><span class="font-weight-mediu
                 </v-flex>
             </v-layout>
         </v-container>
-        <v-container row wrap mt-15>
+        <v-container mt-15>
             <v-layout>
                 <v-flex xs12 sm6 offset-sm-3>
                 <h3>Satoshi and the Noob</h3>

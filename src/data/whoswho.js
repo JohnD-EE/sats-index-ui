@@ -80,6 +80,69 @@ const whoswho = [
 ]
 */
 
+
+
+/*
+CANDIDATES:
+
+Anti Bitcoiners:
+
+Bill Gates:
+Craig Wright
+Peter Schiff:
+Charlie Munger:
+Roger Ver
+Bill Mayer?
+
+Pro:
+Satoshi Nakamoto
+Michael Saylor
+Jimmy Song
+Marty Bent
+Nik Bhatia
+Dan Held
+Vitalek Buterin
+Willy Woo
+Pete McCormack
+Max Keiser
+Stacey Herbert
+Jeff Berwick
+Cathy Wood
+Gavin Andreson
+Andreas Antonopulous
+Guy from Coin Bureau
+Erik Voorhees
+Anthony Pompliano
+Nic Carter
+Saifedean Ammous
+Robert Breedlove
+Nick Szabo
+Jeff Booth
+Jameson Lopp
+Balaji S. Srinivasan
+Parker Lewis
+Gigi
+Raoul Pal
+Winklevoss Twins
+Knut Svanholm
+William Clemente
+Roger Ver
+Stephan Livera
+Pete Rizzo
+Vijay Boyapati - Wrote the Bullish case for Bitcoin
+Allen Farrington - @allenf32 uncerto.com
+Jack Dorsey
+Pierre Rochard - Co-founder the Satoshi Nakamoto Institute
+John Vallis - Host, Bitcoin Rapid-Fire Podcast
+Preston Pysh - Ethics based leader, entrepreneur, and international bestselling author
+Samson Mow - CSO at Blockstream, CEO at Pixelmatic
+
+Middle:
+Helon Musk
+Ed Snowden
+Nassim Taleb
+*/
+
 const whosWhoData = [
     {
         name: 'Satoshi Nakamoto',
@@ -601,28 +664,28 @@ const whosWhoData = [
             },
             {
                 metric: 'controversial',
-                rating: 99,
+                rating: 95,
                 reason: 'Jus ask Elon who called Pete \'obnoxious\' when triggering the collapse in May 2021'
             },
             {
                 metric: 'noobfriendly',
                 rating: 95,
-                reason: 'List to his Beginner\'s Guide to Bitcoin series, just brilliant'
+                reason: 'Noobs should listen to his Beginner\'s Guide to Bitcoin series, just brilliant'
             },
             {
                 metric: 'integrity',
-                rating: 95,
+                rating: 90,
                 reason: 'Seems to act on his words'
             },
             {
                 metric: 'lovability',
-                rating: 80,
+                rating: 75,
                 reason: 'Very subjective, some haters but many likers'
             },
             {
                 metric: 'influence',
-                rating: 95,
-                reason: 'Triggering the crash of May 2021 when debating Elon'
+                rating: 80,
+                reason: 'Some have suggested he triggered the crash of May 2021 when debating Elon, however in reality there would be more factors in play'
             },
             {
                 metric: 'educator',

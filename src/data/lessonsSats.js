@@ -28,6 +28,7 @@ const lessons = [
             'The sole purpose of this website is to recognise that with Bitcoin we are building the base layer of freedom for future generations.',
             'Satoshi may have conceived of (or discovered) Bitcoin but its an ecosystem that needs the participation of users. Bitcoin is an ecosystem.',
             'We won\'t get there by shaming no-coiners or by propogating the black and white thinking of legacy media, we\'ll do better to step outside our world, see it from the perspective of the Noob, and patiently teach them about the Satoshi\'s beautiful gift to humanity.',
+            'Bitcoin has been described as the Trojan Horse for Freedom...'
         ],
         advice: 'Bitcoin is an ecosystem. We are creating Bitcoin, not Satoshi...',
         resources: [
@@ -36,7 +37,10 @@ const lessons = [
     },
     {
         name: 'Economic Revolution',
-        notes: ['People\'s interest in Bitcoin may be sparked by speculation, but it teaches them about money, and they stay for the monetary and economic revolution.'],
+        notes: [
+            'People\'s interest in Bitcoin may be sparked by speculation, but it teaches them about money, and they stay for the monetary and economic revolution.',
+            'Bitcoin is redesigning and re-engineering the way the money in your pocket works.'
+        ],
         resources: [
             { description: '', site: '', url: ''}
         ],
@@ -50,26 +54,35 @@ const lessons = [
     },
     {
         name: 'Unit of Account',
-        notes: ['Thanks to Satoshi, there are 100 million Sats to a Bitcoin to give a capped supply of 2.1 Quadrillion Satoshis. When people no longer have any trust in government issued fiat shitcoins, and the world is denominated in Bitcoin, we may see Sats becoming a globally accepted standard Unit of Account'],
+        notes: [
+            'Standards and measures are important.',
+            'Thanks to Satoshi, there are 100 million Sats to a Bitcoin to give a capped supply of 2.1 Quadrillion Satoshis. When people no longer have any trust in government issued fiat shitcoins, and the world is denominated in Bitcoin, we may see Sats becoming a globally accepted standard Unit of Account'
+        ],
         resources: [
-            { description: '', site: '', url: ''}
+            { description: '', site: '', url: '' }
         ],
     },
     {
         name: 'Our lives are mediated by money',
         notes: [
-            'The proposition of SatsIndex is that our lives are mediated by money. Robert Anoton Wilson referred to money as Bio Survival Tokens, money emerges naturally as a concept in human society as a convenient way to facilitate exchange so we can each specialise in what we\'re good at and buy the things we can\'t produce ourselves. But money has become corrupted and debased, so that now we have to rely on government issued shitcoin which is backed by nothing. Bitcoin is the soundest form of money we\'ve ever known and so will organically grow to a point where our lives are mediated by Bitcoin',
-            'MO'
+            'The proposition of SatsIndex is that our lives are mediated by money.',
+            'Money emerges naturally as a concept in human society as a convenient way to measure the relative value of things and to facilitate exchange.',
+            'The ability to trade with each other means we can each specialise in what we\'re good at and buy the things we can\'t produce ourselves.',
+            'But the history of money shows us that money can become corrupted, debased, and used to wield power, control, coerce and enslave people.',
+            'Bitcoin is the soundest form of money we\'ve ever known and will organically grow to a point where our lives are mediated by Bitcoin',
         ],
         resources: [
-            { description: '', site: '', url: ''}
+            { description: '', site: '', url: '' }
         ],
     },
     {
         name: 'Everyday items will be bought with Sats',
-        notes: ['We\'ll be buying things on the Lightning network, not the Bitcoin Network'],
+        notes: [
+            'We\'ll be buying things on the Lightning network, not the Bitcoin Network.',
+            'Bitcoin will be used for settlements, other channels such as Lightning Network or the Liquid Sidechain will be used for Transactions. We\'ll have a transaction layer for Visa like transactions and a settlement layer to audit and verify the overall money supply.'
+        ],
         resources: [
-            { description: '', site: '', url: ''}
+            { description: '', site: '', url: '' }
         ],
     }
 ]

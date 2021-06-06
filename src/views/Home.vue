@@ -9,10 +9,11 @@
                          </v-flex>
             </v-layout>
         </v-container>
-        <v-container row wrap mt-15>
-            <v-layout>
+        <v-container mt-15>
+            <v-layout row wrap>
                 <v-flex xs12 sm6 offset-sm-3>
-                    <h3>We're just getting starterd...</h3>
+                    <h3>Just getting starterd...</h3>
+                    <p class="subtitle">The ideas here are unfinished, this is a personal project for self-education which will hopefully benefit others.</p>
                     <p>This website aims to demistify Bitcoin and entertiain the curious minded by being accessble to Noobs and informatative to OGs. Please come back from time to time as this resource grows...</p>
                 </v-flex>
             </v-layout>
@@ -120,48 +121,19 @@
                 </v-flex>
             </v-layout>
         </v-container>
-        
 
-<v-container row mt-5>
-            <v-layout>
-                
-                <v-flex xs12 sm6 offset-sm-3
-                    >
-                    <div 
-                    v-for="(item, i) in lessons"
-                    :key="i"
-                    class="mt-5 mb-5">
-                    <v-card
-                    class="mx-auto"
-                    >
-                        <v-card-text>
-                            <v-row>
-                            <v-col
-                            cols="10"
-                            >
-                            
-                        <p class="headline text--primary">
-                            {{ item.name }}
-                        </p>
-                            </v-col>
-                            <v-col
-                            cols="2"
-                            >
-                                
-                            </v-col>
-                            </v-row>
-                        <div v-for="(note, n) in item.notes"
-                            :key="n">
-                            <p>{{ note }}</p>
-                        </div>
-                        </v-card-text>
-                        <v-divider></v-divider>
-                        <v-card-text>ADVICE: {{ item.advice }}</v-card-text>
-                    </v-card>
-                    </div>
-                </v-flex>
+        <v-container class="mt-15 mb-0">
+            <v-layout row wrap>
+                <v-flex xs12 sm8 offset-sm-2>
+                    <h3>Things to Ponder:</h3>
+                    <p>What can we learn by thinking about denominiating global prices in Bitcoin and Sats?</p>
+                    </v-flex>
             </v-layout>
-</v-container>
+        </v-container>
+        
+        <app-lessons 
+            :lessons = "lessons">
+        </app-lessons>
 
     </div>
 </template>
@@ -170,6 +142,7 @@
 import basket from '../data/basket.js'
 import exchange from '../data/exchange.js'
 import formatCurrency from 'format-currency'
+import lessonsComponent from './../components/Lessons.vue'
 import lessonsSats from '../data/lessonsSats.js'
 
   export default {
@@ -189,6 +162,9 @@ import lessonsSats from '../data/lessonsSats.js'
         { text: 'Date', align: 'end', sortable: false, value: 'datetime' }
       ]
     }),
+    components: {
+        'app-lessons': lessonsComponent
+    },
     computed: {
         lessons () {
             let lessons = this.lessonsSats.lessons

@@ -109,12 +109,14 @@
             <v-layout row wrap>
                 <v-flex xs12 sm8 offset-sm-2>
                     <h3>Things to Ponder:</h3>
-                    <p>The Times 03/Jan/2009 Chancellor on brink of second bailout for banks</p>
-                    <p>Here we will have some learning points about mone as a store of value and contrast the forceful imposition of state issued money against the peaceful voluntariasm of Bitcoin.</p>
-                    <p class="mt-15">Bitcoin doesn't need Satoshi or Elon Musk, it doesn't need guns or the force of the State, it doesn't need a headquarters or a marketing department, it doesn't need branches or security guards, it doesn't need politicians, it doesn't need vaults, it doesn't need bail-outs... It just needs to be understood.</p>
+                    <p>What can we learn by comparing Bitcoin to Fiat Shitcoin?</p>
                     </v-flex>
             </v-layout>
         </v-container>
+
+        <app-lessons 
+            :lessons = "lessons">
+        </app-lessons>
 
     </div>
 </template>
@@ -123,6 +125,7 @@
 import exchange from '../data/exchange.js'
 import zillions from '../data/zillions.js'
 import formatCurrency from 'format-currency'
+import lessonsComponent from './../components/Lessons.vue'
 import lessonsFiat from '../data/lessonsFiat.js'
 
   export default {
@@ -142,6 +145,9 @@ import lessonsFiat from '../data/lessonsFiat.js'
             { text: 'Date', align: 'end', sortable: false, value: 'datetime' }
         ]
     }),
+    components: {
+        'app-lessons': lessonsComponent
+    },
     computed: {
         lessons () {
             let lessons = this.lessonsFiat.lessons
