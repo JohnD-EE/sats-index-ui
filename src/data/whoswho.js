@@ -111,7 +111,7 @@ Cathy Wood
 Gavin Andreson
 Andreas Antonopulous
 Guy from Coin Bureau
-Erik Voorhees
+Erik Voorhees - was on the wrong side of the blocksize war
 Anthony Pompliano
 Nic Carter
 Saifedean Ammous
@@ -122,6 +122,7 @@ Jameson Lopp
 Balaji S. Srinivasan
 Parker Lewis
 Gigi
+Dhruv Bansal 
 Raoul Pal
 Winklevoss Twins
 Knut Svanholm

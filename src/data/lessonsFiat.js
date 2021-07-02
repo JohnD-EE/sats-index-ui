@@ -36,7 +36,8 @@ const lessons = [
     {
         name: 'Theft is disgusting',
         notes: [
-            'Central Bank liquidity injection, stimulus, quantitative easing, bail-outs - these are all terms for theft'
+            'Central Bank liquidity injection, stimulus, quantitative easing, bail-outs - these are all terms for theft',
+            'No-one would voluntarily hold a currency which is subject to arbitrary supply inflation - we do so because we are forced to.'
         ],
         resources: [
             { description: '', site: '', url: ''}
